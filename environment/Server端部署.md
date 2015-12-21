@@ -36,15 +36,31 @@ nohup ./os-install-server &>os-install-server.log &
 1. 解压 idcos-osinstall-ui.tar.gz 到web server目录
 2. 设置虚拟目录规则，以nginx为例：
 
-```bash
+```nginx
 server {
-        listen 80;
-        server_name localhost;
-        index index.html;
-        root /usr/yunji/idcos-osinstall;
-        location /api/ {
-                proxy_pass http://localhost:8083;
-        }
+    listen       80 default_server;
+    server_name  _;
+
+    include /etc/nginx/default.d/*.conf;
+
+    location / {
+        root   /home/www;
+        index  index.html index.htm;
+    }
+
+    location /api/ {
+        proxy_pass http://localhost:8083;
+    }
+
+    error_page  404              /404.html;
+    location = /404.html {
+        root   /usr/share/nginx/html;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
 }
 ```
 
