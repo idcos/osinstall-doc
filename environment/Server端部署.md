@@ -2,9 +2,14 @@
 
 ## 初始化数据
 
-* 数据库：mysql
-* 编码：utf8
-* 执行步骤：使用命令行或者客户端工具将idcos-osinstall.sql导入，会自动生成idcos-osinstall数据库（注意设定utf8编码)
+* 我们使用的是开源的mysql数据库，需要先配置mysql并倒入表结构：
+
+```bash
+# yum install mysql-server
+# service mysqld start
+# chkconfig mysqld on
+# mysql -uroot < idcos-osinstall.sql
+```
 
 ## 部署server
 
@@ -49,7 +54,7 @@ server {
     }
 
     location /api/ {
-        proxy_pass http://localhost:8083;
+        proxy_pass http://127.0.0.1:8083;
     }
 
     error_page  404              /404.html;
