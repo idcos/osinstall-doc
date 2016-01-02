@@ -1,0 +1,941 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>硬件工具打包规范 | x86服务器安装开发文档</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.5">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../os/index.html" />
+    
+    
+    <link rel="prev" href="../hardware/硬件工具包开发.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="5.4"
+        data-chapter-title="硬件工具打包规范"
+        data-filepath="hardware/硬件工具打包规范.md"
+        data-basepath=".."
+        data-revision="Sat Jan 02 2016 16:08:16 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="preface/index.html">
+            
+                
+                    <a href="../preface/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        前言
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="preface/目标读者.html">
+            
+                
+                    <a href="../preface/目标读者.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        目标读者
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="preface/目录结构.html">
+            
+                
+                    <a href="../preface/目录结构.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        目录结构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface/文档约定.html">
+            
+                
+                    <a href="../preface/文档约定.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        文档约定
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="platform/index.html">
+            
+                
+                    <a href="../platform/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        平台架构
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="platform/系统服务架构.html">
+            
+                
+                    <a href="../platform/系统服务架构.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        系统服务架构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="platform/系统功能模块.html">
+            
+                
+                    <a href="../platform/系统功能模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        系统功能模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="platform/系统安装流程.html">
+            
+                
+                    <a href="../platform/系统安装流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        系统安装流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="platform/新硬件升级流程.html">
+            
+                
+                    <a href="../platform/新硬件升级流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        新硬件升级流程
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="environment/index.html">
+            
+                
+                    <a href="../environment/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        环境搭建
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="environment/系统环境依赖.html">
+            
+                
+                    <a href="../environment/系统环境依赖.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        系统环境依赖
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="environment/安装dhcp服务.html">
+            
+                
+                    <a href="../environment/安装dhcp服务.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        安装dhcp服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="environment/安装tftp服务.html">
+            
+                
+                    <a href="../environment/安装tftp服务.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        安装tftp服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="environment/安装http服务.html">
+            
+                
+                    <a href="../environment/安装http服务.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        安装http服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="environment/安装dns服务.html">
+            
+                
+                    <a href="../environment/安装dns服务.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        安装dns服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="environment/Server端部署.html">
+            
+                
+                    <a href="../environment/Server端部署.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Server端部署
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="bootos/index.html">
+            
+                
+                    <a href="../bootos/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        BootOS开发
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="bootos/BootOS介绍.html">
+            
+                
+                    <a href="../bootos/BootOS介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        BootOS介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="bootos/BootOS使用.html">
+            
+                
+                    <a href="../bootos/BootOS使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        BootOS使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="bootos/BootOS驱动更新.html">
+            
+                
+                    <a href="../bootos/BootOS驱动更新.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        BootOS驱动更新
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="bootos/BootOS重新打包.html">
+            
+                
+                    <a href="../bootos/BootOS重新打包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        BootOS重新打包
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="hardware/index.html">
+            
+                
+                    <a href="../hardware/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        硬件配置开发
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="hardware/硬件配置基础.html">
+            
+                
+                    <a href="../hardware/硬件配置基础.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        硬件配置基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="hardware/硬件配置开发规范.html">
+            
+                
+                    <a href="../hardware/硬件配置开发规范.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        硬件配置开发规范
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="hardware/硬件工具包开发.html">
+            
+                
+                    <a href="../hardware/硬件工具包开发.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        硬件工具包开发
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.4" data-path="hardware/硬件工具打包规范.html">
+            
+                
+                    <a href="../hardware/硬件工具打包规范.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        硬件工具打包规范
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="os/index.html">
+            
+                
+                    <a href="../os/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        系统模板定制
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="os/自动化安装基础.html">
+            
+                
+                    <a href="../os/自动化安装基础.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        自动化安装基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="os/系统模板定制规范.html">
+            
+                
+                    <a href="../os/系统模板定制规范.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        系统模板定制规范
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="api/index.html">
+            
+                
+                    <a href="../api/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        平台开发接口
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="api/数据录入接口.html">
+            
+                
+                    <a href="../api/数据录入接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        数据录入接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="api/状态查询接口.html">
+            
+                
+                    <a href="../api/状态查询接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        状态查询接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="api/日志进度上报接口.html">
+            
+                
+                    <a href="../api/日志进度上报接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        日志进度上报接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="api/硬件配置模板接口.html">
+            
+                
+                    <a href="../api/硬件配置模板接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        硬件配置模板接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="api/pxe安装文件接口.html">
+            
+                
+                    <a href="../api/pxe安装文件接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        pxe安装文件接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="api/系统模板查询接口.html">
+            
+                
+                    <a href="../api/系统模板查询接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        系统模板查询接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="api/网络配置查询接口.html">
+            
+                
+                    <a href="../api/网络配置查询接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        网络配置查询接口
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="append/index.html">
+            
+                
+                    <a href="../append/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        附录
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >x86服务器安装开发文档</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x786C;&#x4EF6;&#x5DE5;&#x5177;&#x6253;&#x5305;&#x89C4;&#x8303;">&#x786C;&#x4EF6;&#x5DE5;&#x5177;&#x6253;&#x5305;&#x89C4;&#x8303;</h1>
+<h2 id="&#x5B9A;&#x4E49;rpm&#x5305;&#x4F9D;&#x8D56;">&#x5B9A;&#x4E49;RPM&#x5305;&#x4F9D;&#x8D56;</h2>
+<p>&#x9700;&#x8981;&#x5728;RPM&#x5305;&#x7684;SPEC&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x6307;&#x5B9A;&#x786C;&#x4EF6;&#x914D;&#x7F6E;&#x811A;&#x672C;&#x6240;&#x9700;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x4EE5;Dell&#x670D;&#x52A1;&#x5668;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li>RAID&#x914D;&#x7F6E;&#xFF1A;&#x4F9D;&#x8D56;<code>MegaCli</code></li>
+<li>OOB&#x914D;&#x7F6E;&#xFF1A;&#x4F9D;&#x8D56;<code>ipmitool</code></li>
+<li>BIOS&#x914D;&#x7F6E;&#xFF1A;&#x4F9D;&#x8D56;<code>syscfg</code></li>
+</ul>
+<h2 id="&#x5B9A;&#x4E49;&#x811A;&#x672C;&#x8DEF;&#x5F84;">&#x5B9A;&#x4E49;&#x811A;&#x672C;&#x8DEF;&#x5F84;</h2>
+<p>&#x6BCF;&#x4E2A;&#x5382;&#x5546;&#x5B9A;&#x4E49;&#x7684;&#x811A;&#x672C;&#x8DEF;&#x5F84;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># tree
+</span><span class="token punctuation">.</span>
+<span class="token operator">|</span><span class="token operator">--</span> dell
+<span class="token operator">|</span>   <span class="token operator">|</span><span class="token operator">--</span> bios<span class="token punctuation">.</span>sh
+<span class="token operator">|</span>   <span class="token operator">|</span><span class="token operator">--</span> oob<span class="token punctuation">.</span>sh
+<span class="token operator">|</span>   `<span class="token operator">--</span> raid<span class="token punctuation">.</span>sh
+<span class="token operator">|</span><span class="token operator">--</span> hp
+<span class="token operator">|</span>   <span class="token operator">|</span><span class="token operator">--</span> bios<span class="token punctuation">.</span>sh
+<span class="token operator">|</span>   <span class="token operator">|</span><span class="token operator">--</span> oob<span class="token punctuation">.</span>sh
+<span class="token operator">|</span>   `<span class="token operator">--</span> raid<span class="token punctuation">.</span>sh
+`<span class="token operator">--</span> inspur
+    <span class="token operator">|</span><span class="token operator">--</span> bios<span class="token punctuation">.</span>sh
+    <span class="token operator">|</span><span class="token operator">--</span> oob<span class="token punctuation">.</span>sh
+    `<span class="token operator">--</span> raid<span class="token punctuation">.</span>sh
+</code></pre>
+<p>RPM&#x5305;&#x5B9A;&#x4E49;&#x7684;&#x811A;&#x672C;&#x8DEF;&#x5F84;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># rpm -ql dell-hw-tools
+</span><span class="token operator">/</span>opt<span class="token operator">/</span>yunji<span class="token operator">/</span>osinstall<span class="token operator">/</span>dell<span class="token operator">/</span>bios<span class="token punctuation">.</span>sh
+<span class="token operator">/</span>opt<span class="token operator">/</span>yunji<span class="token operator">/</span>osinstall<span class="token operator">/</span>dell<span class="token operator">/</span>oob<span class="token punctuation">.</span>sh
+<span class="token operator">/</span>opt<span class="token operator">/</span>yunji<span class="token operator">/</span>osinstall<span class="token operator">/</span>dell<span class="token operator">/</span>raid<span class="token punctuation">.</span>sh
+</code></pre>
+<h2 id="&#x5B9A;&#x4E49;spec&#x89C4;&#x8303;">&#x5B9A;&#x4E49;SPEC&#x89C4;&#x8303;</h2>
+<p>&#x4EE5;Dell&#x4E3A;&#x4F8B;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;spec&#x6253;&#x5305;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># cat dell-hw-tools.spec
+</span><span class="token operator">%</span>define __spec_prep_post <span class="token boolean">true</span>
+<span class="token operator">%</span>define __spec_prep_pre <span class="token boolean">true</span>
+<span class="token operator">%</span>define __spec_build_post <span class="token boolean">true</span>
+<span class="token operator">%</span>define __spec_build_pre <span class="token boolean">true</span>
+<span class="token operator">%</span>define __spec_install_post <span class="token boolean">true</span>
+<span class="token operator">%</span>define __spec_install_pre <span class="token boolean">true</span>
+<span class="token operator">%</span>define __spec_clean_post <span class="token boolean">true</span>
+<span class="token operator">%</span>define __spec_clean_pre <span class="token boolean">true</span>
+<span class="token operator">%</span>define _binary_filedigest_algorithm <span class="token number">1</span>
+<span class="token operator">%</span>define _build_binary_file_digest_algo <span class="token number">1</span>
+<span class="token operator">%</span>define _binary_payload w9<span class="token punctuation">.</span>gzdio
+
+Name<span class="token punctuation">:</span> dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools
+Version<span class="token punctuation">:</span> <span class="token number">0.1</span>
+Release<span class="token punctuation">:</span> <span class="token number">1</span>
+Summary<span class="token punctuation">:</span> none
+AutoReqProv<span class="token punctuation">:</span> no
+BuildRoot<span class="token punctuation">:</span> <span class="token operator">%</span>buildroot
+Prefix<span class="token punctuation">:</span> <span class="token operator">/</span>opt<span class="token operator">/</span>yunji<span class="token operator">/</span>osinstall<span class="token operator">/</span>dell
+Group<span class="token punctuation">:</span> default
+License<span class="token punctuation">:</span> GPLv3<span class="token operator">+</span>
+Vendor<span class="token punctuation">:</span> CentOS
+URL<span class="token punctuation">:</span> none
+Packager<span class="token punctuation">:</span> admin@dell<span class="token punctuation">.</span>com
+
+Requires<span class="token punctuation">:</span> MegaCli
+Requires<span class="token punctuation">:</span> ipmitool
+Requires<span class="token punctuation">:</span> syscfg
+
+<span class="token operator">%</span>description
+none
+
+<span class="token operator">%</span>prep
+
+<span class="token operator">%</span>build
+
+<span class="token operator">%</span><span class="token function">install</span>
+
+<span class="token operator">%</span>clean
+
+<span class="token operator">%</span>files
+<span class="token operator">%</span>defattr<span class="token punctuation">(</span><span class="token operator">-</span><span class="token punctuation">,</span>root<span class="token punctuation">,</span>root<span class="token punctuation">,</span><span class="token operator">-</span><span class="token punctuation">)</span>
+<span class="token operator">/</span>opt<span class="token operator">/</span>yunji<span class="token operator">/</span>osinstall<span class="token operator">/</span>dell<span class="token operator">/</span>oob<span class="token punctuation">.</span>sh
+<span class="token operator">/</span>opt<span class="token operator">/</span>yunji<span class="token operator">/</span>osinstall<span class="token operator">/</span>dell<span class="token operator">/</span>raid<span class="token punctuation">.</span>sh
+<span class="token operator">/</span>opt<span class="token operator">/</span>yunji<span class="token operator">/</span>osinstall<span class="token operator">/</span>dell<span class="token operator">/</span>bios<span class="token punctuation">.</span>sh
+
+<span class="token operator">%</span>changelog
+</code></pre>
+<h2 id="&#x751F;&#x6210;rpm&#x5305;">&#x751F;&#x6210;RPM&#x5305;</h2>
+<p>&#x4F7F;&#x7528;<code>rpmbuild</code>&#x547D;&#x4EE4;&#x8BFB;&#x53D6;spec&#x6587;&#x4EF6;&#x6765;&#x751F;&#x6210;rpm&#x5305;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># rpmbuild -bb dell-hw-tools.spec
+</span>Executing<span class="token punctuation">(</span><span class="token operator">%</span>prep<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token operator">/</span>bin<span class="token operator">/</span>sh <span class="token operator">-</span>e <span class="token operator">/</span>var<span class="token operator">/</span>tmp<span class="token operator">/</span>rpm<span class="token operator">-</span>tmp<span class="token punctuation">.</span>SyB7Tz
+Executing<span class="token punctuation">(</span><span class="token operator">%</span>build<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token operator">/</span>bin<span class="token operator">/</span>sh <span class="token operator">-</span>e <span class="token operator">/</span>var<span class="token operator">/</span>tmp<span class="token operator">/</span>rpm<span class="token operator">-</span>tmp<span class="token punctuation">.</span>NR8Yga
+Executing<span class="token punctuation">(</span><span class="token operator">%</span><span class="token function">install</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token operator">/</span>bin<span class="token operator">/</span>sh <span class="token operator">-</span>e <span class="token operator">/</span>var<span class="token operator">/</span>tmp<span class="token operator">/</span>rpm<span class="token operator">-</span>tmp<span class="token punctuation">.</span>O7eNEK
+Processing files<span class="token punctuation">:</span> dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools<span class="token operator">-</span><span class="token number">0.1</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span>x86_64
+Checking <span class="token keyword">for</span> unpackaged <span class="token function">file</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>rpm<span class="token operator">/</span>check<span class="token operator">-</span>files <span class="token operator">/</span>root<span class="token operator">/</span>rpmbuild<span class="token operator">/</span>BUILDROOT<span class="token operator">/</span>dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools<span class="token operator">-</span><span class="token number">0.1</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span>x86_64
+Wrote<span class="token punctuation">:</span> <span class="token operator">/</span>root<span class="token operator">/</span>rpmbuild<span class="token operator">/</span>RPMS<span class="token operator">/</span>x86_64<span class="token operator">/</span>dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools<span class="token operator">-</span><span class="token number">0.1</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+Executing<span class="token punctuation">(</span><span class="token operator">%</span>clean<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token operator">/</span>bin<span class="token operator">/</span>sh <span class="token operator">-</span>e <span class="token operator">/</span>var<span class="token operator">/</span>tmp<span class="token operator">/</span>rpm<span class="token operator">-</span>tmp<span class="token punctuation">.</span>OoeaBV
+</code></pre>
+<h2 id="&#x6D4B;&#x8BD5;rpm&#x5305;">&#x6D4B;&#x8BD5;RPM&#x5305;</h2>
+<p>&#x5728;BootOS&#x5185;&#x6267;&#x884C;<code>rpm</code>&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x751F;&#x6210;&#x7684;&#x786C;&#x4EF6;&#x5DE5;&#x5177;&#x5305;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># yum install dell-hw-tools
+</span>Loaded plugins<span class="token punctuation">:</span> fastestmirror<span class="token punctuation">,</span> security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+base                                                                                                                                                     <span class="token operator">|</span> <span class="token number">3.7</span> kB     <span class="token number">00</span><span class="token punctuation">:</span><span class="token number">00</span>
+extras                                                                                                                                                   <span class="token operator">|</span> <span class="token number">3.4</span> kB     <span class="token number">00</span><span class="token punctuation">:</span><span class="token number">00</span>
+idcos                                                                                                                                                    <span class="token operator">|</span> <span class="token number">2.9</span> kB     <span class="token number">00</span><span class="token punctuation">:</span><span class="token number">00</span>
+idcos<span class="token operator">/</span>primary_db                                                                                                                                         <span class="token operator">|</span>  <span class="token number">40</span> kB     <span class="token number">00</span><span class="token punctuation">:</span><span class="token number">00</span>
+updates                                                                                                                                                  <span class="token operator">|</span> <span class="token number">3.4</span> kB     <span class="token number">00</span><span class="token punctuation">:</span><span class="token number">00</span>
+updates<span class="token operator">/</span>primary_db                                                                                                                                       <span class="token operator">|</span> <span class="token number">2.7</span> MB     <span class="token number">00</span><span class="token punctuation">:</span><span class="token number">02</span>
+Resolving Dependencies
+<span class="token operator">--</span><span class="token operator">&gt;</span> Running transaction check
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">0.1</span><span class="token operator">-</span><span class="token number">1</span> will be installed
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> syscfg <span class="token keyword">for</span> package<span class="token punctuation">:</span> dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools<span class="token operator">-</span><span class="token number">0.2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> ipmitool <span class="token keyword">for</span> package<span class="token punctuation">:</span> dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools<span class="token operator">-</span><span class="token number">0.2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> MegaCli <span class="token keyword">for</span> package<span class="token punctuation">:</span> dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools<span class="token operator">-</span><span class="token number">0.2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Running transaction check
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package MegaCli<span class="token punctuation">.</span>noarch <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">8.07</span><span class="token punctuation">.</span>10<span class="token operator">-</span><span class="token number">1</span> will be installed
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package ipmitool<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">1.8</span><span class="token punctuation">.</span>11<span class="token operator">-</span><span class="token number">29</span><span class="token punctuation">.</span>el6_7 will be installed
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package syscfg<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">5.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.70</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6 will be installed
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>isvc <span class="token keyword">for</span> package<span class="token punctuation">:</span> syscfg<span class="token operator">-</span><span class="token number">5.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.70</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>hapi <span class="token keyword">for</span> package<span class="token punctuation">:</span> syscfg<span class="token operator">-</span><span class="token number">5.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.70</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>deng <span class="token keyword">for</span> package<span class="token punctuation">:</span> syscfg<span class="token operator">-</span><span class="token number">5.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.70</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> libdchipm<span class="token punctuation">.</span>so<span class="token punctuation">.</span>8<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>64bit<span class="token punctuation">)</span> <span class="token keyword">for</span> package<span class="token punctuation">:</span> syscfg<span class="token operator">-</span><span class="token number">5.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.70</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> libdchbas<span class="token punctuation">.</span>so<span class="token punctuation">.</span>8<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>64bit<span class="token punctuation">)</span> <span class="token keyword">for</span> package<span class="token punctuation">:</span> syscfg<span class="token operator">-</span><span class="token number">5.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.70</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Running transaction check
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package srvadmin<span class="token operator">-</span>deng<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.8</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6 will be installed
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>omilcore <span class="token keyword">for</span> package<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>deng<span class="token operator">-</span><span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.8</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>omilcore <span class="token keyword">for</span> package<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>deng<span class="token operator">-</span><span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.8</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package srvadmin<span class="token operator">-</span>hapi<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.10</span><span class="token punctuation">.</span>2<span class="token punctuation">.</span>el6 will be installed
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package srvadmin<span class="token operator">-</span>isvc<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.38</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6 will be installed
+<span class="token operator">--</span><span class="token operator">&gt;</span> Running transaction check
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package srvadmin<span class="token operator">-</span>omilcore<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.85</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6 will be installed
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> smbios<span class="token operator">-</span>utils<span class="token operator">-</span>bin <span class="token keyword">for</span> package<span class="token punctuation">:</span> srvadmin<span class="token operator">-</span>omilcore<span class="token operator">-</span><span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.85</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Running transaction check
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package smbios<span class="token operator">-</span>utils<span class="token operator">-</span>bin<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6 will be installed
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> libsmbios <span class="token operator">=</span> <span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6 <span class="token keyword">for</span> package<span class="token punctuation">:</span> smbios<span class="token operator">-</span>utils<span class="token operator">-</span>bin<span class="token operator">-</span><span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> libsmbios_c<span class="token punctuation">.</span>so<span class="token punctuation">.</span>2<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>64bit<span class="token punctuation">)</span> <span class="token keyword">for</span> package<span class="token punctuation">:</span> smbios<span class="token operator">-</span>utils<span class="token operator">-</span>bin<span class="token operator">-</span><span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Processing Dependency<span class="token punctuation">:</span> libsmbios<span class="token punctuation">.</span>so<span class="token punctuation">.</span>2<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>64bit<span class="token punctuation">)</span> <span class="token keyword">for</span> package<span class="token punctuation">:</span> smbios<span class="token operator">-</span>utils<span class="token operator">-</span>bin<span class="token operator">-</span><span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6<span class="token punctuation">.</span>x86_64
+<span class="token operator">--</span><span class="token operator">&gt;</span> Running transaction check
+<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> Package libsmbios<span class="token punctuation">.</span>x86_64 <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6 will be installed
+<span class="token operator">--</span><span class="token operator">&gt;</span> Finished Dependency Resolution
+
+Dependencies Resolved
+
+<span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">==</span>
+ Package                                        Arch                                Version                                          Repository                            Size
+<span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">==</span>
+Installing<span class="token punctuation">:</span>
+ dell<span class="token operator">-</span>hw<span class="token operator">-</span>tools                                  x86_64                              <span class="token number">0.1</span><span class="token operator">-</span><span class="token number">1</span>                                            idcos                                <span class="token number">3.3</span> k
+Installing <span class="token keyword">for</span> dependencies<span class="token punctuation">:</span>
+ MegaCli                                        noarch                              <span class="token number">8.07</span><span class="token punctuation">.</span>10<span class="token operator">-</span><span class="token number">1</span>                                        idcos                                <span class="token number">1.5</span> M
+ ipmitool                                       x86_64                              <span class="token number">1.8</span><span class="token punctuation">.</span>11<span class="token operator">-</span><span class="token number">29</span><span class="token punctuation">.</span>el6_7                                  updates                              <span class="token number">464</span> k
+ libsmbios                                      x86_64                              <span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6                                 idcos                                <span class="token number">2.0</span> M
+ smbios<span class="token operator">-</span>utils<span class="token operator">-</span>bin                               x86_64                              <span class="token number">2.2</span><span class="token punctuation">.</span>27<span class="token operator">-</span><span class="token number">4.4</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6                                 idcos                                <span class="token number">119</span> k
+ srvadmin<span class="token operator">-</span>deng                                  x86_64                              <span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.8</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6                                  idcos                                <span class="token number">730</span> k
+ srvadmin<span class="token operator">-</span>hapi                                  x86_64                              <span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.10</span><span class="token punctuation">.</span>2<span class="token punctuation">.</span>el6                                 idcos                                <span class="token number">959</span> k
+ srvadmin<span class="token operator">-</span>isvc                                  x86_64                              <span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.38</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6                                 idcos                                <span class="token number">7.8</span> M
+ srvadmin<span class="token operator">-</span>omilcore                              x86_64                              <span class="token number">8.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.85</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6                                 idcos                                 <span class="token number">29</span> k
+ syscfg                                         x86_64                              <span class="token number">5.1</span><span class="token punctuation">.</span>0<span class="token operator">-</span><span class="token number">4.70</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>el6                                 idcos                                <span class="token number">436</span> k
+
+Transaction Summary
+<span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">==</span>
+Install      <span class="token number">10</span> Package<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+
+Total download size<span class="token punctuation">:</span> <span class="token number">14</span> M
+Installed size<span class="token punctuation">:</span> <span class="token number">43</span> M
+Is this ok <span class="token punctuation">[</span>y<span class="token operator">/</span>N<span class="token punctuation">]</span><span class="token punctuation">:</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../hardware/硬件工具包开发.html" class="navigation navigation-prev " aria-label="Previous page: 硬件工具包开发"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../os/index.html" class="navigation navigation-next " aria-label="Next page: 系统模板定制"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
