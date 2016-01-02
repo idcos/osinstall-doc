@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # x86服务器安装开发文档
 
 ## 背景
@@ -15,3 +16,5 @@
 ## 本项目地址
 
 * [https://github.com/idcos](https://github.com/idcos)
+=======
+# ![](logo.png) x86服务器安装开发文档
