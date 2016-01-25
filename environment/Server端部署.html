@@ -53,7 +53,7 @@
         data-chapter-title="Server端部署"
         data-filepath="environment/Server端部署.md"
         data-basepath=".."
-        data-revision="Sat Jan 02 2016 16:25:22 GMT+0800 (CST)"
+        data-revision="Mon Jan 25 2016 16:26:10 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -755,12 +755,17 @@
 <ul>
 <li>&#x8FD0;&#x884C;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4F1A;&#x76D1;&#x542C;8083&#x7AEF;&#x53E3;&#xFF1A;</li>
 </ul>
-<pre><code class="lang-bash"><span class="token function">chmod</span> <span class="token number">755</span> os<span class="token operator">-</span><span class="token function">install</span><span class="token operator">-</span>server
-<span class="token function">nohup</span> <span class="token punctuation">.</span><span class="token operator">/</span>os<span class="token operator">-</span><span class="token function">install</span><span class="token operator">-</span>server <span class="token operator">&amp;</span><span class="token operator">&gt;</span>os<span class="token operator">-</span><span class="token function">install</span><span class="token operator">-</span>server<span class="token punctuation">.</span>log <span class="token operator">&amp;</span>
-</code></pre>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># chmod 755 os-install-server
+</span><span class="token comment" spellcheck="true"># nohup ./os-install-server &amp;&gt;os-install-server.log &amp;
+</span></code></pre>
 <h2 id="&#x90E8;&#x7F72;ui&#x524D;&#x7AEF;">&#x90E8;&#x7F72;UI&#x524D;&#x7AEF;</h2>
 <ol>
 <li>&#x89E3;&#x538B; idcos-osinstall-ui.tar.gz &#x5230;web server&#x76EE;&#x5F55;</li>
+</ol>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># mkdir /home/www
+</span><span class="token comment" spellcheck="true"># tar zxpf idcos-osinstall-ui.tar.gz -C /home/www
+</span></code></pre>
+<ol>
 <li>&#x8BBE;&#x7F6E;&#x865A;&#x62DF;&#x76EE;&#x5F55;&#x89C4;&#x5219;&#xFF0C;&#x4EE5;nginx&#x4E3A;&#x4F8B;&#xFF1A;</li>
 </ol>
 <pre><code class="lang-nginx">server {
@@ -790,7 +795,7 @@
 }
 </code></pre>
 <p>&#x90E8;&#x7F72;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#xFF1A;</p>
-<p><a href="http://localhost/#/dashboard/main" target="_blank">http://localhost/#/dashboard/main</a></p>
+<p><a href="http://localhost/" target="_blank">http://localhost/</a></p>
 
                     
                     </section>
