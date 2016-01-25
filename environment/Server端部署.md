@@ -32,13 +32,19 @@
 * 运行可执行文件，执行文件会监听8083端口：
 
 ```bash
-chmod 755 os-install-server
-nohup ./os-install-server &>os-install-server.log &
+# chmod 755 os-install-server
+# nohup ./os-install-server &>os-install-server.log &
 ```
 
 ## 部署UI前端
 
 1. 解压 idcos-osinstall-ui.tar.gz 到web server目录
+
+```bash
+# mkdir /home/www
+# tar zxpf idcos-osinstall-ui.tar.gz -C /home/www
+```
+
 2. 设置虚拟目录规则，以nginx为例：
 
 ```nginx
@@ -71,4 +77,4 @@ server {
 
 部署完成后，访问地址：
 
-[http://localhost/#/dashboard/main](http://localhost/#/dashboard/main)
+[http://localhost/](http://localhost/)

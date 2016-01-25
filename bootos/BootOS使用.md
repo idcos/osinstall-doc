@@ -22,4 +22,29 @@ LABEL bootos
 * 使用http方式来加载```vmlinuz```和```initrd.img```，取代传统的tftp加载方式，大文件效率更高
 * 增加```biosdevname=0```参数，关闭了centos 6下面网卡自动重命名的情况，使用ethX的命名规范
 * 设定参数```SERVER_ADDR=http://osinstall.idcos.net```，指定server端的地址，agent会解析此参数并向server端发起请求，请根据实际情况修改
-* 设定```IPAPPEND 2```参数，一​些​服​务​器​拥​有​多​个​网​络​接​口​，可​能​无​法​将​BIOS所​知​的​第​一​个​网​络​接​口​设​定​为​eth0，这​将​导​致​安​装​程​序​使​用​与​PXE启​动​时​不​同​的​网​络​接​口​。增加此参数默认会使用PXE传递的网卡作为默认网络接口。
+* 设定```IPAPPEND 2```参数，一些服务器拥有多个网络接口，可能无法将BIOS所知的第一个网络接口设定为eth0，这将导致安装程序使用与PXE启动时不同的网络接口。增加此参数默认会使用PXE传递的网卡作为默认网络接口。
+
+## 开发者模式
+
+BootOS提供一个配置参数，可以打开开发者模式。那么开发者模式和普通模式有什么区别呢，下面简单介绍一下。
+
+* 普通模式：服务器进入BootOS以后，agent自动启动，收集服务器产品型号（如Dell PowerEdge R420）并提交给Server和硬件配置数据库进行比对，如果硬件配置数据库并没有这个型号的硬件配置，那么agent不会执行硬件配置，会返回错误信息。
+* 开发者模式：在开发者模式中，同样服务器进入BootOS以后，agent自动启动，收集服务器产品型号（如Dell PowerEdge R420）但不会和Server端硬件配置数据库进行比对，直接执行硬件配置，并返回结果。
+
+开发者模式的意义在于什么？目前有些硬件型号的服务器不在硬件配置数据库，用户咨询是否可以支持其硬件配置。因为主流的Raid，OOB的配置基本是通用的，所以打开开发者模式以后，硬件配置脚本会自动检测该型号的硬件是否能支持，如果支持则会进行配置，请用户谨慎选择。
+
+如何打开开发者模式？修改PXE default配置如下，增加```DEVELOPER=1```参数即可。
+
+```bash
+# cat /var/lib/tftpboot/pxelinux.cfg/default
+DEFAULT menu.c32
+PROMPT 0
+TIMEOUT 30
+
+LABEL bootos
+  MENU LABEL ^BootOS
+  MENU DEFAULT
+  KERNEL http://osinstall.idcos.net/bootos/vmlinuz
+  APPEND initrd=http://osinstall.idcos.net/bootos/initrd.img console=tty0 selinux=0 biosdevname=0 SERVER_ADDR=http://osinstall.idcos.net DEVELOPER=1
+  IPAPPEND 2
+```

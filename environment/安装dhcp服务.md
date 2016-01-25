@@ -21,6 +21,7 @@ max-lease-time 3600;
 next-server 192.168.0.1;
 filename "gpxelinux.0";
 option domain-name-servers 192.168.0.1;
+option domain-search "idcos.net";
 option root-path "192.168.0.1:/";
 
 subnet 192.168.0.0 netmask 255.255.255.0 {
