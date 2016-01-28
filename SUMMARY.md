@@ -21,6 +21,7 @@
     * [BootOS重新打包](bootos/BootOS重新打包.md)
 * [硬件配置开发](hardware/README.md)
     * [硬件配置基础](hardware/硬件配置基础.md)
+    * [硬件工具包使用](hardware/硬件工具包使用.md)
     * [硬件配置开发规范](hardware/硬件配置开发规范.md)
     * [硬件工具包开发](hardware/硬件工具包开发.md)
     * [硬件工具打包规范](hardware/硬件工具打包规范.md)
