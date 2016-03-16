@@ -8,26 +8,6 @@
 # chkconfig nginx on
 ```
 
-配置www服务，指定安装镜像源
-
-```bash
-# cat /etc/nginx/conf.d/default.conf
-server {
-    listen       80;
-    server_name  localhost;
-
-    location / {
-        root   /home/www;
-        index  index.html index.htm;
-    }
-
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   /usr/share/nginx/html;
-    }
-}
-```
-
 下载系统安装介质，以centos 6.7为例，需要下载ISO文件并导入http目录。
 
 ```bash

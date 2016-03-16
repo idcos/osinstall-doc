@@ -29,3 +29,11 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
     option routers 192.168.0.1;
 }
 ```
+
+说明：
+
+* `next-server` 指向tftp服务器，默认是本机ip
+* `domain-name-servers` 指向dns服务器，默认是本机ip
+* `domain-search` dns搜索域，请根据实际情况修改
+* `root-path` 指向客户端的根路径，默认是本机ip
+* `subnet` 分配的dhcp网段，请根据实际情况修改

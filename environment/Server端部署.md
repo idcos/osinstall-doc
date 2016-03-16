@@ -1,5 +1,31 @@
 # Server端部署
 
+## 下载
+
+x86服务器安装下载链接如下：[http://www.idcos.com/X86/download.html](http://www.idcos.com/X86/download.html)
+
+推荐使用编译好的二进制程序(包含UI、Server、BootOS、初始数据等)
+
+程序目录结构如下：
+
+```bash
+idcos-osinstall
+├── bootos
+│   ├── initrd.img
+│   └── vmlinuz
+├── server
+│   ├── idcos-osinstall.sql
+│   └── osinstall-server-$version.x86_64.rpm
+└── ui
+    └── idcos-osinstall-ui.tar.gz
+```
+
+其中：
+
+* bootos目录包含了bootos启动所需内核vmlinuz以及文件系统initrd.img
+* server目录包含了数据库表结构idcos-osinstall.sql以及server安装包
+* ui目录包含了ui的静态页面
+
 ## 初始化数据
 
 * 我们使用的是开源的mysql数据库，需要先配置mysql并倒入表结构：
@@ -8,44 +34,55 @@
 # yum install mysql-server
 # service mysqld start
 # chkconfig mysqld on
-# mysql -uroot < idcos-osinstall.sql
+# mysql -uroot < /path/of/idcos-osinstall.sql
 ```
 
 ## 部署server
 
-* 修改配置文件idcos-os-install.json，配置数据库连接：
+* 安装`osinstall-server`
 
-```json
-"repo": {
-    "connection": "用户名:密码@tcp(localhost:3306)/idcos-osinstall?charset=utf8&parseTime=True&loc=Local"
-},
+```bash
+# rpm -ivh /path/of/osinstall-server-$version.x86_64.rpm
 ```
 
-* 修改配置文件idcos-os-install.json，设置PXE配置文件目录：
+* 修改配置文件`/etc/osinstall-server/osinstall-server.conf`，其中`$user`和`$password`是连接数据库的用户名和密码，请根据实际情况修改
 
-```json
-"osInstall":{
+```bash
+# cat /etc/osinstall-server/osinstall-server.conf
+{
+  "repo": {
+    "connection":"$user:$password@tcp(127.0.0.1:3306)/idcos-osinstall?charset=utf8&parseTime=True&loc=Local"
+  },
+  "osInstall":{
     "pxeConfigDir":"/var/lib/tftpboot/pxelinux.cfg"
+   },
+  "logger":{
+      "logFile":"/var/log/osinstall-server.log",
+      "level":"debug"
+  },
+  "rsa":{
+    "publicKey":"/etc/osinstall-server/public.pem",
+    "privateKey":"/etc/osinstall-server/private.pem"
+  }
 }
 ```
 
-* 运行可执行文件，执行文件会监听8083端口：
+* 启动osinstall-server：
 
 ```bash
-# chmod 755 os-install-server
-# nohup ./os-install-server &>os-install-server.log &
+# service osinstall-server start
 ```
 
 ## 部署UI前端
 
-1. 解压 idcos-osinstall-ui.tar.gz 到web server目录
+* 解压 idcos-osinstall-ui.tar.gz 到web server目录
 
 ```bash
 # mkdir /home/www
-# tar zxpf idcos-osinstall-ui.tar.gz -C /home/www
+# tar zxpf /path/of/idcos-osinstall-ui.tar.gz -C /home/www
 ```
 
-2. 设置虚拟目录规则，以nginx为例：
+* 设置http根目录和api转发规则，以nginx为例，修改配置文件`/etc/nginx/conf.d/default.conf`如下：
 
 ```nginx
 server {
@@ -74,6 +111,11 @@ server {
     }
 }
 ```
+
+其中：
+
+* `root /home/www;` 参数指向http的根目录是`/home/www`
+* `proxy_pass http://127.0.0.1:8083;` 将api请求转发到本机的`8083`端口，即`osinstall-server`监听的端口
 
 部署完成后，访问地址：
 

@@ -1,5 +1,7 @@
 # BootOS驱动更新
 
+> 普通用户如果没有特殊的需求不需要定制BootOS，可以省略接下来的BootOS驱动更新和打包。
+
 BootOS是由标准的CentOS定制而成，所以非常容易定制。这里我们提供的BootOS是基于CentOS 6.7的系统，支持的网络驱动如下：
 
 ```bash
