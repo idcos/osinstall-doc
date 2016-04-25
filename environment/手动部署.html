@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>安装http服务 |  x86服务器安装开发文档</title>
+        <title>手动部署 |  x86服务器安装开发文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.5">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../environment/安装dns服务.html" />
+    <link rel="next" href="../bootos/index.html" />
     
     
-    <link rel="prev" href="../environment/安装tftp服务.html" />
+    <link rel="prev" href="../environment/一键部署.html" />
     
 
         
@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="3.4"
-        data-chapter-title="安装http服务"
-        data-filepath="environment/安装http服务.md"
+        data-level="3.2"
+        data-chapter-title="手动部署"
+        data-filepath="environment/手动部署.md"
         data-basepath=".."
-        data-revision="Wed Mar 16 2016 22:48:26 GMT+0800 (CST)"
+        data-revision="Mon Apr 25 2016 14:18:02 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -245,91 +245,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="environment/系统环境依赖.html">
+        <li class="chapter " data-level="3.1" data-path="environment/一键部署.html">
             
                 
-                    <a href="../environment/系统环境依赖.html">
+                    <a href="../environment/一键部署.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>3.1.</b>
                         
-                        系统环境依赖
+                        一键部署
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="environment/安装dhcp服务.html">
+        <li class="chapter active" data-level="3.2" data-path="environment/手动部署.html">
             
                 
-                    <a href="../environment/安装dhcp服务.html">
+                    <a href="../environment/手动部署.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>3.2.</b>
                         
-                        安装dhcp服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="environment/安装tftp服务.html">
-            
-                
-                    <a href="../environment/安装tftp服务.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.3.</b>
-                        
-                        安装tftp服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="3.4" data-path="environment/安装http服务.html">
-            
-                
-                    <a href="../environment/安装http服务.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.4.</b>
-                        
-                        安装http服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="environment/安装dns服务.html">
-            
-                
-                    <a href="../environment/安装dns服务.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.5.</b>
-                        
-                        安装dns服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="environment/Server端部署.html">
-            
-                
-                    <a href="../environment/Server端部署.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.6.</b>
-                        
-                        Server端部署
+                        手动部署
                     </a>
             
             
@@ -787,7 +727,69 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x5B89;&#x88C5;http&#x670D;&#x52A1;">&#x5B89;&#x88C5;http&#x670D;&#x52A1;</h1>
+                        <h1 id="&#x624B;&#x52A8;&#x90E8;&#x7F72;">&#x624B;&#x52A8;&#x90E8;&#x7F72;</h1>
+<p>&#x5BF9;&#x4E8E;&#x6709;&#x7ECF;&#x9A8C;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x624B;&#x52A8;&#x90E8;&#x7F72;&#x73AF;&#x5883;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x5B9A;&#x5236;&#x3002;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4F9D;&#x8D56;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x6548;&#x7387;&#x975E;&#x5E38;&#x4F4E;&#x3002;</p>
+<h2 id="&#x5B89;&#x88C5;dhcp&#x670D;&#x52A1;">&#x5B89;&#x88C5;dhcp&#x670D;&#x52A1;</h2>
+<p>&#x7F51;&#x7EDC;&#x542F;&#x52A8;&#x4F9D;&#x8D56;dhcp&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x914D;&#x7F6E;pxe&#x542F;&#x52A8;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># yum install dhcp
+</span><span class="token comment" spellcheck="true"># chkconfig dhcpd on
+</span></code></pre>
+<p>&#x914D;&#x7F6E;dhcp&#x670D;&#x52A1;&#xFF0C;&#x8BF7;&#x7528;&#x6237;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x4FEE;&#x6539;&#x7F51;&#x6BB5;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># cat /etc/dhcp/dhcpd.conf
+</span>allow booting<span class="token punctuation">;</span>
+allow bootp<span class="token punctuation">;</span>
+ddns<span class="token operator">-</span>update<span class="token operator">-</span>style none<span class="token punctuation">;</span>
+<span class="token function">ping</span><span class="token operator">-</span>check <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token function">ping</span><span class="token operator">-</span><span class="token function">timeout</span> <span class="token number">3</span><span class="token punctuation">;</span>
+default<span class="token operator">-</span>lease<span class="token operator">-</span><span class="token function">time</span> <span class="token number">120</span><span class="token punctuation">;</span>
+max<span class="token operator">-</span>lease<span class="token operator">-</span><span class="token function">time</span> <span class="token number">600</span><span class="token punctuation">;</span>
+authoritative<span class="token punctuation">;</span>
+next<span class="token operator">-</span>server osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token punctuation">;</span>
+filename <span class="token string">&quot;gpxelinux.0&quot;</span><span class="token punctuation">;</span>
+option domain<span class="token operator">-</span>name<span class="token operator">-</span>servers <span class="token number">192.168</span><span class="token punctuation">.</span>0<span class="token punctuation">.</span>1<span class="token punctuation">;</span>
+option domain<span class="token operator">-</span>search <span class="token string">&quot;idcos.com&quot;</span><span class="token punctuation">;</span>
+option root<span class="token operator">-</span>path <span class="token string">&quot;osinstall.idcos.com:/&quot;</span><span class="token punctuation">;</span>
+
+subnet <span class="token number">192.168</span><span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 netmask <span class="token number">255.255</span><span class="token punctuation">.</span>255<span class="token punctuation">.</span>0 <span class="token punctuation">{</span>
+    range <span class="token number">192.168</span><span class="token punctuation">.</span>0<span class="token punctuation">.</span>101 <span class="token number">192.168</span><span class="token punctuation">.</span>0<span class="token punctuation">.</span>200<span class="token punctuation">;</span>
+    option routers <span class="token number">192.168</span><span class="token punctuation">.</span>0<span class="token punctuation">.</span>1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li><code>next-server</code> &#x6307;&#x5411;tftp&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x672C;&#x673A;ip</li>
+<li><code>domain-name-servers</code> &#x6307;&#x5411;dns&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x672C;&#x673A;ip</li>
+<li><code>domain-search</code> dns&#x641C;&#x7D22;&#x57DF;&#xFF0C;&#x8BF7;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x4FEE;&#x6539;</li>
+<li><code>root-path</code> &#x6307;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6839;&#x8DEF;&#x5F84;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x672C;&#x673A;ip</li>
+<li><code>subnet</code> &#x5206;&#x914D;&#x7684;dhcp&#x7F51;&#x6BB5;&#xFF0C;&#x8BF7;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x4FEE;&#x6539;</li>
+</ul>
+<h2 id="&#x5B89;&#x88C5;tftp&#x670D;&#x52A1;">&#x5B89;&#x88C5;tftp&#x670D;&#x52A1;</h2>
+<p>&#x5B89;&#x88C5;tftp&#x670D;&#x52A1;&#x548C;syslinux&#x7684;tftpboot&#x5DE5;&#x5177;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># yum install tftp-server syslinux-tftpboot
+</span><span class="token comment" spellcheck="true"># chkconfig xinetd on
+</span></code></pre>
+<p>&#x914D;&#x7F6E;tftp&#x670D;&#x52A1;&#xFF0C;&#x8BBE;&#x5B9A;tftp&#x6839;&#x76EE;&#x5F55;&#x4E3A;<code>/var/lib/tftpboot</code>&#xFF0C;&#x4FEE;&#x6539;<code>disable = no</code></p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># cat /etc/xinetd.d/tftp
+</span><span class="token comment" spellcheck="true"># default: off
+</span><span class="token comment" spellcheck="true"># description: The tftp server serves files using the trivial file transfer \
+</span><span class="token comment" spellcheck="true">#       protocol.  The tftp protocol is often used to boot diskless \
+</span><span class="token comment" spellcheck="true">#       workstations, download configuration files to network-aware printers, \
+</span><span class="token comment" spellcheck="true">#       and to start the installation process for some operating systems.
+</span><span class="token function">service</span> tftp
+<span class="token punctuation">{</span>
+        socket_type             <span class="token operator">=</span> dgram
+        protocol                <span class="token operator">=</span> udp
+        <span class="token function">wait</span>                    <span class="token operator">=</span> <span class="token function">yes</span>
+        user                    <span class="token operator">=</span> root
+        server                  <span class="token operator">=</span> <span class="token operator">/</span>usr<span class="token operator">/</span>sbin<span class="token operator">/</span><span class="token keyword">in</span><span class="token punctuation">.</span>tftpd
+        server_args             <span class="token operator">=</span> <span class="token operator">-</span>s <span class="token operator">/</span>var<span class="token operator">/</span>lib<span class="token operator">/</span>tftpboot
+        disable                 <span class="token operator">=</span> no
+        per_source              <span class="token operator">=</span> <span class="token number">11</span>
+        cps                     <span class="token operator">=</span> <span class="token number">100</span> <span class="token number">2</span>
+        flags                   <span class="token operator">=</span> IPv4
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;http&#x670D;&#x52A1;">&#x5B89;&#x88C5;http&#x670D;&#x52A1;</h2>
 <p>&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x6240;&#x9700;&#x8981;&#x7684;&#x955C;&#x50CF;&#x6E90;&#x4F7F;&#x7528;http&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x63D0;&#x4F9B;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5;nginx&#x5E76;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x4ECB;&#x8D28;&#x7136;&#x540E;&#x5BFC;&#x5165;ISO&#x6587;&#x4EF6;&#x751F;&#x6210;&#x5B89;&#x88C5;&#x6E90;&#x3002;</p>
 <pre><code class="lang-bash"><span class="token comment" spellcheck="true"># rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
 </span><span class="token comment" spellcheck="true"># yum install nginx
@@ -800,6 +802,140 @@
 </span><span class="token comment" spellcheck="true"># rsync -az /media/ /home/www/centos/6.7/os/x86_64/
 </span><span class="token comment" spellcheck="true"># umount /media
 </span></code></pre>
+<h2 id="&#x5B89;&#x88C5;dns&#x670D;&#x52A1;">&#x5B89;&#x88C5;dns&#x670D;&#x52A1;</h2>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x5957;dns&#x7528;&#x4F5C;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x5982;&#x679C;&#x5185;&#x90E8;&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x6709;dns&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x6B64;&#x6B65;&#x9AA4;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;dnsmasq&#x6765;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;&#xFF0C;&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># yum install dnsmasq
+</span><span class="token comment" spellcheck="true"># chkconfig dnsmasq on
+</span></code></pre>
+<p>&#x5B89;&#x88C5;&#x597D;&#x4EE5;&#x540E;&#x9700;&#x8981;&#x589E;&#x52A0;hosts.conf&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x91CC;&#x5047;&#x8BBE;&#x65B0;&#x589E;&#x7684;&#x57DF;&#x540D;&#x662F;<code>osinstall.idcos.com</code>&#xFF0C;ip&#x5730;&#x5740;&#x662F;<code>10.0.1.1</code></p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># cat /etc/dnsmasq.conf
+</span>conf<span class="token operator">-</span><span class="token function">dir</span><span class="token operator">=</span><span class="token operator">/</span>etc<span class="token operator">/</span>dnsmasq<span class="token punctuation">.</span>d
+
+<span class="token comment" spellcheck="true"># cat /etc/dnsmasq.d/hosts.conf
+</span>address<span class="token operator">=</span><span class="token operator">/</span>osinstall<span class="token operator">/</span><span class="token number">10.0</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>1
+address<span class="token operator">=</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span><span class="token number">10.0</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>1
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x542F;&#x52A8;dnsmasq&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x57DF;&#x540D;&#x662F;&#x5426;&#x751F;&#x6548;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># service dnsmasq start
+</span><span class="token comment" spellcheck="true"># dig @127.0.0.1 osinstall.idcos.com A
+</span>
+<span class="token punctuation">;</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span> DiG <span class="token number">9.8</span><span class="token punctuation">.</span>2rc1<span class="token operator">-</span>RedHat<span class="token operator">-</span><span class="token number">9.8</span><span class="token punctuation">.</span>2<span class="token operator">-</span><span class="token number">0.30</span><span class="token punctuation">.</span>rc1<span class="token punctuation">.</span>el6_6<span class="token punctuation">.</span>3 <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span> osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com @<span class="token number">127.0</span><span class="token punctuation">.</span>0<span class="token punctuation">.</span>1
+<span class="token punctuation">;</span><span class="token punctuation">;</span> global options<span class="token punctuation">:</span> <span class="token operator">+</span>cmd
+<span class="token punctuation">;</span><span class="token punctuation">;</span> Got answer<span class="token punctuation">:</span>
+<span class="token punctuation">;</span><span class="token punctuation">;</span> <span class="token operator">-</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span>HEADER<span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">-</span> opcode<span class="token punctuation">:</span> QUERY<span class="token punctuation">,</span> status<span class="token punctuation">:</span> NOERROR<span class="token punctuation">,</span> <span class="token function">id</span><span class="token punctuation">:</span> <span class="token number">13030</span>
+<span class="token punctuation">;</span><span class="token punctuation">;</span> flags<span class="token punctuation">:</span> qr aa rd ra<span class="token punctuation">;</span> QUERY<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ANSWER<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> AUTHORITY<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> ADDITIONAL<span class="token punctuation">:</span> <span class="token number">0</span>
+
+<span class="token punctuation">;</span><span class="token punctuation">;</span> QUESTION SECTION<span class="token punctuation">:</span>
+<span class="token punctuation">;</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token punctuation">.</span>           IN      A
+
+<span class="token punctuation">;</span><span class="token punctuation">;</span> ANSWER SECTION<span class="token punctuation">:</span>
+osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token punctuation">.</span>    <span class="token number">0</span>       IN      A       <span class="token number">10.0</span><span class="token punctuation">.</span>1<span class="token punctuation">.</span>1
+
+<span class="token punctuation">;</span><span class="token punctuation">;</span> Query <span class="token function">time</span><span class="token punctuation">:</span> <span class="token number">0</span> msec
+<span class="token punctuation">;</span><span class="token punctuation">;</span> SERVER<span class="token punctuation">:</span> <span class="token number">127.0</span><span class="token punctuation">.</span>0<span class="token punctuation">.</span>1<span class="token comment" spellcheck="true">#53(127.0.0.1)
+</span><span class="token punctuation">;</span><span class="token punctuation">;</span> WHEN<span class="token punctuation">:</span> Tue Mar  <span class="token number">1</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">44</span><span class="token punctuation">:</span><span class="token number">16</span> <span class="token number">2016</span>
+<span class="token punctuation">;</span><span class="token punctuation">;</span> MSG SIZE  rcvd<span class="token punctuation">:</span> <span class="token number">53</span>
+</code></pre>
+<h2 id="server&#x7AEF;&#x90E8;&#x7F72;">Server&#x7AEF;&#x90E8;&#x7F72;</h2>
+<h3 id="&#x4E0B;&#x8F7D;">&#x4E0B;&#x8F7D;</h3>
+<p>&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x7A0B;&#x5E8F;(&#x5305;&#x542B;UI&#x3001;Server&#x3001;BootOS&#x3001;&#x521D;&#x59CB;&#x6570;&#x636E;&#x7B49;)</p>
+<p>&#x7A0B;&#x5E8F;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash">cloudboot<span class="token operator">-</span>server
+&#x251C;&#x2500;&#x2500; bootos
+&#x2502;   &#x251C;&#x2500;&#x2500; initrd<span class="token punctuation">.</span>img
+&#x2502;   &#x2514;&#x2500;&#x2500; vmlinuz
+&#x251C;&#x2500;&#x2500; server
+&#x2502;   &#x251C;&#x2500;&#x2500; cloudboot<span class="token operator">-</span>server<span class="token punctuation">.</span>sql
+&#x2502;   &#x2514;&#x2500;&#x2500; cloudboot<span class="token operator">-</span>server<span class="token operator">-</span><span class="token property">$version</span><span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+&#x2514;&#x2500;&#x2500; ui
+    &#x2514;&#x2500;&#x2500; cloudboot<span class="token operator">-</span>server<span class="token operator">-</span>ui<span class="token punctuation">.</span><span class="token function">tar</span><span class="token punctuation">.</span>gz
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>bootos&#x76EE;&#x5F55;&#x5305;&#x542B;&#x4E86;bootos&#x542F;&#x52A8;&#x6240;&#x9700;&#x5185;&#x6838;vmlinuz&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;initrd.img</li>
+<li>server&#x76EE;&#x5F55;&#x5305;&#x542B;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;cloudboot-server.sql&#x4EE5;&#x53CA;server&#x5B89;&#x88C5;&#x5305;</li>
+<li>ui&#x76EE;&#x5F55;&#x5305;&#x542B;&#x4E86;ui&#x7684;&#x9759;&#x6001;&#x9875;&#x9762;</li>
+</ul>
+<h3 id="&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;">&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;</h3>
+<ul>
+<li>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5F00;&#x6E90;&#x7684;mysql&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x914D;&#x7F6E;mysql&#x5E76;&#x5012;&#x5165;&#x8868;&#x7ED3;&#x6784;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># yum install mysql-server
+</span><span class="token comment" spellcheck="true"># service mysqld start
+</span><span class="token comment" spellcheck="true"># chkconfig mysqld on
+</span><span class="token comment" spellcheck="true"># mysql -uroot &lt; /path/of/cloudboot-server.sql
+</span></code></pre>
+<h3 id="&#x90E8;&#x7F72;server">&#x90E8;&#x7F72;server</h3>
+<ul>
+<li>&#x5B89;&#x88C5;<code>cloudboot-server</code></li>
+</ul>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># rpm -ivh /path/of/cloudboot-server-$version.x86_64.rpm
+</span></code></pre>
+<ul>
+<li>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>/etc/cloudboot-server/cloudboot-server.conf</code>&#xFF0C;&#x5176;&#x4E2D;<code>$user</code>&#x548C;<code>$password</code>&#x662F;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x8BF7;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x4FEE;&#x6539;</li>
+</ul>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># cat /etc/cloudboot-server/cloudboot-server.conf
+</span><span class="token punctuation">{</span>
+  <span class="token string">&quot;repo&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;connection&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;<span class="token property">$user</span>:<span class="token property">$password@tcp</span>(127.0.0.1:3306)/idcos-osinstall?charset=utf8&amp;parseTime=True&amp;loc=Local&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;osInstall&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token string">&quot;pxeConfigDir&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;/var/lib/tftpboot/pxelinux.cfg&quot;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;logger&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+      <span class="token string">&quot;logFile&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;/var/log/cloudboot-server.log&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;level&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;debug&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>&#x542F;&#x52A8;cloudboot-server&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># service cloudboot-server start
+</span></code></pre>
+<h3 id="&#x90E8;&#x7F72;ui&#x524D;&#x7AEF;">&#x90E8;&#x7F72;UI&#x524D;&#x7AEF;</h3>
+<ul>
+<li>&#x89E3;&#x538B; cloudboot-server-ui.tar.gz &#x5230;web server&#x76EE;&#x5F55;</li>
+</ul>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># mkdir /home/www
+</span><span class="token comment" spellcheck="true"># tar zxpf /path/of/cloudboot-server-ui.tar.gz -C /home/www
+</span></code></pre>
+<ul>
+<li>&#x8BBE;&#x7F6E;http&#x6839;&#x76EE;&#x5F55;&#x548C;api&#x8F6C;&#x53D1;&#x89C4;&#x5219;&#xFF0C;&#x4EE5;nginx&#x4E3A;&#x4F8B;&#xFF0C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>/etc/nginx/conf.d/default.conf</code>&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-nginx">server {
+    listen       80 default_server;
+    server_name  _;
+
+    include /etc/nginx/default.d/*.conf;
+
+    location / {
+        root   /home/www;
+        index  index.html index.htm;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:8083;
+    }
+
+    error_page  404              /404.html;
+    location = /404.html {
+        root   /usr/share/nginx/html;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li><code>root /home/www;</code> &#x53C2;&#x6570;&#x6307;&#x5411;http&#x7684;&#x6839;&#x76EE;&#x5F55;&#x662F;<code>/home/www</code></li>
+<li><code>proxy_pass http://127.0.0.1:8083;</code> &#x5C06;api&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x673A;&#x7684;<code>8083</code>&#x7AEF;&#x53E3;&#xFF0C;&#x5373;<code>cloudboot-server</code>&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;</li>
+</ul>
+<p>&#x90E8;&#x7F72;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="http://localhost/" target="_blank">http://localhost/</a></p>
 
                     
                     </section>
@@ -810,10 +946,10 @@
         </div>
 
         
-        <a href="../environment/安装tftp服务.html" class="navigation navigation-prev " aria-label="Previous page: 安装tftp服务"><i class="fa fa-angle-left"></i></a>
+        <a href="../environment/一键部署.html" class="navigation navigation-prev " aria-label="Previous page: 一键部署"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../environment/安装dns服务.html" class="navigation navigation-next " aria-label="Next page: 安装dns服务"><i class="fa fa-angle-right"></i></a>
+        <a href="../bootos/index.html" class="navigation navigation-next " aria-label="Next page: BootOS开发"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

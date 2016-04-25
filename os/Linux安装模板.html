@@ -53,7 +53,7 @@
         data-chapter-title="Linux安装模板"
         data-filepath="os/Linux安装模板.md"
         data-basepath=".."
-        data-revision="Wed Mar 16 2016 22:48:26 GMT+0800 (CST)"
+        data-revision="Mon Apr 25 2016 14:18:02 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -245,91 +245,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="environment/系统环境依赖.html">
+        <li class="chapter " data-level="3.1" data-path="environment/一键部署.html">
             
                 
-                    <a href="../environment/系统环境依赖.html">
+                    <a href="../environment/一键部署.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>3.1.</b>
                         
-                        系统环境依赖
+                        一键部署
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="environment/安装dhcp服务.html">
+        <li class="chapter " data-level="3.2" data-path="environment/手动部署.html">
             
                 
-                    <a href="../environment/安装dhcp服务.html">
+                    <a href="../environment/手动部署.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>3.2.</b>
                         
-                        安装dhcp服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="environment/安装tftp服务.html">
-            
-                
-                    <a href="../environment/安装tftp服务.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.3.</b>
-                        
-                        安装tftp服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="environment/安装http服务.html">
-            
-                
-                    <a href="../environment/安装http服务.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.4.</b>
-                        
-                        安装http服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="environment/安装dns服务.html">
-            
-                
-                    <a href="../environment/安装dns服务.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.5.</b>
-                        
-                        安装dns服务
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="environment/Server端部署.html">
-            
-                
-                    <a href="../environment/Server端部署.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.6.</b>
-                        
-                        Server端部署
+                        手动部署
                     </a>
             
             
@@ -790,7 +730,7 @@
                         <h1 id="linux&#x5B89;&#x88C5;&#x6A21;&#x677F;">Linux&#x5B89;&#x88C5;&#x6A21;&#x677F;</h1>
 <p>&#x8FD9;&#x91CC;&#x4EE5;CentOS 6.7&#x7CFB;&#x7EDF;&#x4E3A;&#x4F8B;&#xFF0C;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;kickstart&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;</p>
 <pre><code class="lang-bash"><span class="token function">install</span>
-url <span class="token operator">--</span>url<span class="token operator">=</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>net<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">6.7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>
+url <span class="token operator">--</span>url<span class="token operator">=</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">6.7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>
 lang en_US<span class="token punctuation">.</span>UTF<span class="token operator">-</span><span class="token number">8</span>
 keyboard us
 network <span class="token operator">--</span>onboot <span class="token function">yes</span> <span class="token operator">--</span>device bootif <span class="token operator">--</span>bootproto dhcp <span class="token operator">--</span>noipv6
@@ -815,12 +755,12 @@ part <span class="token operator">/</span> <span class="token operator">--</span
 
 <span class="token operator">%</span>pre
 _sn<span class="token operator">=</span>$<span class="token punctuation">(</span>dmidecode <span class="token operator">-</span>s system<span class="token operator">-</span>serial<span class="token operator">-</span>number <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">|</span> <span class="token function">awk</span> &apos;<span class="token operator">/</span><span class="token operator">^</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token comment" spellcheck="true">#]/ { print $1 }&apos;)
-</span>curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x542F;&#x52A8;OS&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;\&quot;,\&quot;InstallProgress\&quot;:0.6,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>net<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
-curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x5206;&#x533A;&#x5E76;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;\&quot;,\&quot;InstallProgress\&quot;:0.7,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>net<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
+</span>curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x542F;&#x52A8;OS&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;\&quot;,\&quot;InstallProgress\&quot;:0.6,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
+curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x5206;&#x533A;&#x5E76;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;\&quot;,\&quot;InstallProgress\&quot;:0.7,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
 
 <span class="token operator">%</span>post
 progress<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;<span class="token property">$1</span>\&quot;,\&quot;InstallProgress\&quot;:<span class="token property">$2</span>,\&quot;InstallLog\&quot;:\&quot;<span class="token property">$3</span>\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>net<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
+    curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;<span class="token property">$1</span>\&quot;,\&quot;InstallProgress\&quot;:<span class="token property">$2</span>,\&quot;InstallLog\&quot;:\&quot;<span class="token property">$3</span>\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
 <span class="token punctuation">}</span>
 
 _sn<span class="token operator">=</span>$<span class="token punctuation">(</span>dmidecode <span class="token operator">-</span>s system<span class="token operator">-</span>serial<span class="token operator">-</span>number <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">|</span> <span class="token function">awk</span> &apos;<span class="token operator">/</span><span class="token operator">^</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token comment" spellcheck="true">#]/ { print $1 }&apos;)
@@ -832,7 +772,7 @@ progress <span class="token string">&quot;&#x914D;&#x7F6E;&#x4E3B;&#x673A;&#x540
 <span class="token function">install</span> ipv6 <span class="token operator">/</span>bin<span class="token operator">/</span><span class="token boolean">true</span>
 EOF
 
-curl <span class="token operator">-</span>o <span class="token operator">/</span>tmp<span class="token operator">/</span>networkinfo <span class="token string">&quot;http://osinstall.idcos.net/api/osinstall/v1/device/getNetworkBySn?sn=<span class="token property">${_sn}</span>&amp;type=raw&quot;</span>
+curl <span class="token operator">-</span>o <span class="token operator">/</span>tmp<span class="token operator">/</span>networkinfo <span class="token string">&quot;http://osinstall.idcos.com/api/osinstall/v1/device/getNetworkBySn?sn=<span class="token property">${_sn}</span>&amp;type=raw&quot;</span>
 <span class="token function">source</span> <span class="token operator">/</span>tmp<span class="token operator">/</span>networkinfo
 
 <span class="token function">cat</span> <span class="token operator">&gt;</span> <span class="token operator">/</span>etc<span class="token operator">/</span>sysconfig<span class="token operator">/</span>network <span class="token operator">&lt;</span><span class="token operator">&lt;</span>EOF
