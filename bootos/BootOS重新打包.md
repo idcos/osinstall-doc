@@ -5,7 +5,7 @@
 ```bash
 # mkdir bootos
 # cd bootos
-# wget -O - http://osinstall.idcos.net/bootos/initrd.img | xz -d | cpio -id
+# wget -O - http://osinstall.idcos.com/bootos/initrd.img | xz -d | cpio -id
 ```
 
 ## 安装最新的igb驱动包

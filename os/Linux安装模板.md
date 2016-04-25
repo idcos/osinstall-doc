@@ -4,7 +4,7 @@
 
 ```bash
 install
-url --url=http://osinstall.idcos.net/centos/6.7/os/x86_64/
+url --url=http://osinstall.idcos.com/centos/6.7/os/x86_64/
 lang en_US.UTF-8
 keyboard us
 network --onboot yes --device bootif --bootproto dhcp --noipv6
@@ -29,12 +29,12 @@ part / --fstype=ext4 --size=100 --grow --ondisk=sda
 
 %pre
 _sn=$(dmidecode -s system-serial-number 2>/dev/null | awk '/^[^#]/ { print $1 }')
-curl -H "Content-Type: application/json" -X POST -d "{\"Sn\":\"$_sn\",\"Title\":\"启动OS安装程序\",\"InstallProgress\":0.6,\"InstallLog\":\"SW5zdGFsbCBPUwo=\"}" http://osinstall.idcos.net/api/osinstall/v1/report/deviceInstallInfo
-curl -H "Content-Type: application/json" -X POST -d "{\"Sn\":\"$_sn\",\"Title\":\"分区并安装软件包\",\"InstallProgress\":0.7,\"InstallLog\":\"SW5zdGFsbCBPUwo=\"}" http://osinstall.idcos.net/api/osinstall/v1/report/deviceInstallInfo
+curl -H "Content-Type: application/json" -X POST -d "{\"Sn\":\"$_sn\",\"Title\":\"启动OS安装程序\",\"InstallProgress\":0.6,\"InstallLog\":\"SW5zdGFsbCBPUwo=\"}" http://osinstall.idcos.com/api/osinstall/v1/report/deviceInstallInfo
+curl -H "Content-Type: application/json" -X POST -d "{\"Sn\":\"$_sn\",\"Title\":\"分区并安装软件包\",\"InstallProgress\":0.7,\"InstallLog\":\"SW5zdGFsbCBPUwo=\"}" http://osinstall.idcos.com/api/osinstall/v1/report/deviceInstallInfo
 
 %post
 progress() {
-    curl -H "Content-Type: application/json" -X POST -d "{\"Sn\":\"$_sn\",\"Title\":\"$1\",\"InstallProgress\":$2,\"InstallLog\":\"$3\"}" http://osinstall.idcos.net/api/osinstall/v1/report/deviceInstallInfo
+    curl -H "Content-Type: application/json" -X POST -d "{\"Sn\":\"$_sn\",\"Title\":\"$1\",\"InstallProgress\":$2,\"InstallLog\":\"$3\"}" http://osinstall.idcos.com/api/osinstall/v1/report/deviceInstallInfo
 }
 
 _sn=$(dmidecode -s system-serial-number 2>/dev/null | awk '/^[^#]/ { print $1 }')
@@ -46,7 +46,7 @@ cat > /etc/modprobe.d/disable_ipv6.conf <<EOF
 install ipv6 /bin/true
 EOF
 
-curl -o /tmp/networkinfo "http://osinstall.idcos.net/api/osinstall/v1/device/getNetworkBySn?sn=${_sn}&type=raw"
+curl -o /tmp/networkinfo "http://osinstall.idcos.com/api/osinstall/v1/device/getNetworkBySn?sn=${_sn}&type=raw"
 source /tmp/networkinfo
 
 cat > /etc/sysconfig/network <<EOF

@@ -27,7 +27,7 @@ updated=0
 使用sed命令批量替换修改boot.cfg文件：
 
 ```bash
-# sed -i.orig -e 's;/;http://osinstall.idcos.net/esxi/6.0u1/;g' -e '/kernelopt/d' /home/www/esxi/6.0u1/boot.cfg
+# sed -i.orig -e 's;/;http://osinstall.idcos.com/esxi/6.0u1/;g' -e '/kernelopt/d' /home/www/esxi/6.0u1/boot.cfg
 ```
 
 最后，在安装设备的时候选择操作系统`esxi6.0u1-x86_64`，系统模板选择`esxi6.0`即可。
