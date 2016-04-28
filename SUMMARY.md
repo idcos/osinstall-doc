@@ -28,6 +28,7 @@
     * [VMware安装模板](os/VMware安装模板.md)
     * [Windows安装模板](os/Windows安装模板.md)
 * [平台开发接口](api/README.md)
+    * [用户相关接口](api/用户相关接口.md)
     * [数据录入接口](api/数据录入接口.md)
     * [状态查询接口](api/状态查询接口.md)
     * [日志进度上报接口](api/日志进度上报接口.md)
