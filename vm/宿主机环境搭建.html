@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>系统安装流程 |  x86服务器安装开发文档</title>
+        <title>宿主机环境搭建 |  x86服务器安装开发文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.5">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../platform/新硬件升级流程.html" />
+    <link rel="next" href="../vm/虚拟机管理介绍.html" />
     
     
-    <link rel="prev" href="../platform/系统功能模块.html" />
+    <link rel="prev" href="../vm/index.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="2.3"
-        data-chapter-title="系统安装流程"
-        data-filepath="platform/系统安装流程.md"
+        data-level="7.1"
+        data-chapter-title="宿主机环境搭建"
+        data-filepath="vm/宿主机环境搭建.md"
         data-basepath=".."
         data-revision="Thu Jun 30 2016 16:35:13 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -194,7 +194,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="platform/系统安装流程.html">
+        <li class="chapter " data-level="2.3" data-path="platform/系统安装流程.html">
             
                 
                     <a href="../platform/系统安装流程.html">
@@ -554,7 +554,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.1" data-path="vm/宿主机环境搭建.html">
+        <li class="chapter active" data-level="7.1" data-path="vm/宿主机环境搭建.html">
             
                 
                     <a href="../vm/宿主机环境搭建.html">
@@ -778,24 +778,56 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x6D41;&#x7A0B;">&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x6D41;&#x7A0B;</h1>
-<p>&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x7528;&#x6237;&#x6D41;&#x7A0B;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ol>
-<li>&#x7531;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x524D;&#x53F0;UI&#x5F55;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x7269;&#x7406;&#x673A;&#x5B89;&#x88C5;&#x8BF7;&#x6C42;</li>
-<li>&#x63A5;&#x7740;&#x9700;&#x8981;&#x7528;&#x6237;&#x624B;&#x5DE5;&#x6216;&#x8005;&#x901A;&#x8FC7;oob&#x63A5;&#x53E3;&#x4ECE;&#x7F51;&#x7EDC;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;</li>
-<li>&#x7F51;&#x7EDC;&#x542F;&#x52A8;&#x9ED8;&#x8BA4;&#x4F1A;&#x8FDB;&#x5165;BootOS&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#x5185;&#x7F6E;&#x7684;agent</li>
-<li>agent&#x4F1A;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x5E8F;&#x5217;&#x53F7;&#x53BB;server&#x7AEF;&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x5728;&#x5B89;&#x88C5;&#x961F;&#x5217;&#x4E2D;</li>
-<li>&#x5982;&#x679C;&#x4E0D;&#x5728;&#x5B89;&#x88C5;&#x961F;&#x5217;&#xFF0C;&#x5219;sleep 60&#x79D2;&#xFF0C;&#x7136;&#x540E;&#x7EE7;&#x7EED;&#x67E5;&#x8BE2;</li>
-<li>&#x8FDB;&#x5165;&#x5B89;&#x88C5;&#x961F;&#x5217;&#x4EE5;&#x540E;&#xFF0C;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x786C;&#x4EF6;&#x578B;&#x53F7;&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x652F;&#x6301;&#x914D;&#x7F6E;</li>
-<li>&#x5982;&#x679C;&#x4E0D;&#x652F;&#x6301;&#x786C;&#x4EF6;&#x914D;&#x7F6E;&#xFF0C;&#x5219;&#x63D0;&#x793A;&#x7ED9;&#x7528;&#x6237;&#x6765;&#x8FDB;&#x4E00;&#x6B65;&#x5904;&#x7406;</li>
-<li>&#x63A5;&#x4E0B;&#x6765;agent&#x4F1A;&#x83B7;&#x53D6;&#x786C;&#x4EF6;&#x914D;&#x7F6E;&#x6A21;&#x677F;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x5177;&#x4F53;&#x7684;&#x914D;&#x7F6E;&#x5185;&#x5BB9;</li>
-<li>&#x7136;&#x540E;agent&#x4F1A;&#x4E0A;&#x62A5;&#x7F51;&#x5361;mac&#x5730;&#x5740;&#xFF0C;&#x901A;&#x77E5;server&#x7AEF;&#x751F;&#x6210;pxe&#x5B89;&#x88C5;&#x6587;&#x4EF6;</li>
-<li>&#x6700;&#x540E;agent&#x4F1A;&#x5F3A;&#x5236;&#x4ECE;&#x7F51;&#x7EDC;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x6D41;&#x7A0B;</li>
-<li>&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x4EE5;&#x540E;&#xFF0C;&#x9996;&#x5148;&#x83B7;&#x53D6;&#x81EA;&#x52A8;&#x5316;&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
-<li>&#x7136;&#x540E;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x7CFB;&#x7EDF;&#x521D;&#x59CB;&#x5316;post&#x811A;&#x672C;</li>
-<li>&#x6700;&#x7EC8;&#x4E0A;&#x62A5;&#x6D88;&#x606F;&#x548C;&#x8FDB;&#x5EA6;&#x901A;&#x77E5;server&#x7AEF;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#xFF0C;&#x91CD;&#x542F;&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;</li>
-</ol>
-<p><img src="&#x7269;&#x7406;&#x673A;&#x5B89;&#x88C5;&#x5DE5;&#x4F5C;&#x6D41;.png" alt=""></p>
+                        <h1 id="&#x5BBF;&#x4E3B;&#x673A;&#x73AF;&#x5883;&#x642D;&#x5EFA;">&#x5BBF;&#x4E3B;&#x673A;&#x73AF;&#x5883;&#x642D;&#x5EFA;</h1>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x57FA;&#x4E8E;x86&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x6784;&#x5EFA;&#x4E86;&#x4E00;&#x5957;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;<code>KVM</code>&#x865A;&#x62DF;&#x673A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</p>
+<h2 id="&#x786C;&#x4EF6;&#x4F9D;&#x8D56;">&#x786C;&#x4EF6;&#x4F9D;&#x8D56;</h2>
+<ul>
+<li>x86&#x670D;&#x52A1;&#x5668;&#x67B6;&#x6784;</li>
+<li>BIOS&#x9700;&#x652F;&#x6301;&#x5E76;&#x5F00;&#x542F;<code>Intel&#xAE; Virtualization Technology</code></li>
+</ul>
+<h2 id="&#x7CFB;&#x7EDF;&#x4F9D;&#x8D56;">&#x7CFB;&#x7EDF;&#x4F9D;&#x8D56;</h2>
+<ul>
+<li>RedHat/CentOS 6.0&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x5B89;&#x88C5;kvm&#x865A;&#x62DF;&#x5316;&#x7EC4;&#x4EF6;</li>
+<li>&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;</li>
+<li>&#x5173;&#x95ED;selinux</li>
+<li>&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x5BBF;&#x4E3B;&#x673A;&#x548C;&#x865A;&#x62DF;&#x673A;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x6BB5;&#x91CC;&#x9762;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7F51;&#x6865;</li>
+<li>&#x521B;&#x5EFA;&#x5355;&#x72EC;&#x7684;LVM Pool&#xFF0C;&#x7528;&#x4E8E;&#x865A;&#x62DF;&#x673A;&#x7684;&#x78C1;&#x76D8;&#x5206;&#x914D;</li>
+<li>&#x786E;&#x4FDD;cloudboot server&#x80FD;&#x591F;&#x901A;&#x8FC7;ssh&#x534F;&#x8BAE;&#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x5230;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x9762;</li>
+</ul>
+<p>cloudboot&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;<code>centos6.7-kvmserver</code>&#x7CFB;&#x7EDF;&#x6A21;&#x677F;&#xFF0C;&#x4F9B;&#x5927;&#x5BB6;&#x53C2;&#x8003;&#x3002;&#x73AF;&#x5883;&#x642D;&#x5EFA;&#x5B8C;&#x6BD5;&#x4EE5;&#x540E;&#xFF0C;&#x624B;&#x52A8;&#x70B9;&#x51FB;<code>&#x66F4;&#x65B0;&#x5BBF;&#x4E3B;&#x673A;&#x4FE1;&#x606F;</code>&#x5373;&#x53EF;&#x3002;</p>
+<pre><code class="lang-bash"><span class="token comment" spellcheck="true">### &#x521B;&#x5EFA;&#x7F51;&#x6865;&#xFF0C;&#x540D;&#x5B57;&#x662F;br0
+</span><span class="token comment" spellcheck="true"># cat &gt; /etc/sysconfig/network-scripts/ifcfg-br0 &lt;&lt;EOF
+</span>DEVICE<span class="token operator">=</span>br0
+BOOTPROTO<span class="token operator">=</span>none
+IPADDR<span class="token operator">=</span><span class="token property">$IPADDR</span>
+NETMASK<span class="token operator">=</span><span class="token property">$NETMASK</span>
+ONBOOT<span class="token operator">=</span><span class="token function">yes</span>
+TYPE<span class="token operator">=</span>Ethernet
+NM_CONTROLLED<span class="token operator">=</span>no
+TYPE<span class="token operator">=</span>Bridge
+DELAY<span class="token operator">=</span><span class="token number">0</span>
+EOF
+
+<span class="token comment" spellcheck="true"># cat &gt; /etc/sysconfig/network-scripts/ifcfg-eth0 &lt;&lt;EOF
+</span>DEVICE<span class="token operator">=</span>eth0
+BOOTPROTO<span class="token operator">=</span>none
+ONBOOT<span class="token operator">=</span><span class="token function">yes</span>
+TYPE<span class="token operator">=</span>Ethernet
+NM_CONTROLLED<span class="token operator">=</span>no
+TYPE<span class="token operator">=</span>Ethernet
+BRIDGE<span class="token operator">=</span>br0
+EOF
+
+<span class="token comment" spellcheck="true">### &#x521B;&#x5EFA;LVM Pool&#xFF0C;&#x540D;&#x5B57;&#x662F;guest_images_lvm&#xFF0C;&#x5982;&#x9700;&#x4FEE;&#x6539;&#xFF0C;&#x8BF7;&#x7F16;&#x8F91;/opt/cloudboot/etc/cloudboot-server/cloudboot-server.conf&#x914D;&#x7F6E;
+</span><span class="token comment" spellcheck="true"># virsh pool-define-as guest_images_lvm logical - - - VolGroup0 /dev/VolGroup0
+</span><span class="token comment" spellcheck="true"># virsh pool-autostart guest_images_lvm
+</span><span class="token comment" spellcheck="true"># virsh pool-start guest_images_lvm
+</span>
+<span class="token comment" spellcheck="true">### &#x6253;&#x901A;cloudboot server&#x5230;&#x5BBF;&#x4E3B;&#x673A;&#x7684;ssh&#x901A;&#x9053;
+</span><span class="token comment" spellcheck="true"># test -f /opt/cloudboot/root/.ssh/id_rsa || ssh-keygen -t rsa -f /opt/cloudboot/root/.ssh/id_rsa -C &apos;&apos; -N &apos;&apos;
+</span><span class="token comment" spellcheck="true"># chmod 600 /opt/cloudboot/root/.ssh/*
+</span><span class="token comment" spellcheck="true"># ssh-copy-id -i /opt/cloudboot/root/.ssh/id_rsa.pub &#x5BBF;&#x4E3B;&#x673A;ip
+</span></code></pre>
 
                     
                     </section>
@@ -806,10 +838,10 @@
         </div>
 
         
-        <a href="../platform/系统功能模块.html" class="navigation navigation-prev " aria-label="Previous page: 系统功能模块"><i class="fa fa-angle-left"></i></a>
+        <a href="../vm/index.html" class="navigation navigation-prev " aria-label="Previous page: 虚拟机管理"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../platform/新硬件升级流程.html" class="navigation navigation-next " aria-label="Next page: 新硬件升级流程"><i class="fa fa-angle-right"></i></a>
+        <a href="../vm/虚拟机管理介绍.html" class="navigation navigation-next " aria-label="Next page: 虚拟机管理介绍"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
