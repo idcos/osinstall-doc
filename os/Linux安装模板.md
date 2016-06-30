@@ -42,10 +42,6 @@ _sn=$(dmidecode -s system-serial-number 2>/dev/null | awk '/^[^#]/ { print $1 }'
 progress "配置主机名和网络" 0.8 "Y29uZmlnIG5ldHdvcmsK"
 
 # config network
-cat > /etc/modprobe.d/disable_ipv6.conf <<EOF
-install ipv6 /bin/true
-EOF
-
 curl -o /tmp/networkinfo "http://osinstall.idcos.com/api/osinstall/v1/device/getNetworkBySn?sn=${_sn}&type=raw"
 source /tmp/networkinfo
 

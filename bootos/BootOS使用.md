@@ -3,7 +3,7 @@
 搭建BootOS启动环境，需要配置tftp启动文件，内容如下：
 
 ```bash
-# cat /var/lib/tftpboot/pxelinux.cfg/default
+# cat /opt/cloudboot/var/lib/tftpboot/pxelinux.cfg/default
 DEFAULT menu.c32
 PROMPT 0
 TIMEOUT 30
@@ -38,7 +38,7 @@ BootOS提供一个配置参数，可以打开开发者模式。那么开发者�
 如何打开开发者模式？修改PXE default配置如下，增加```DEVELOPER=1```参数即可。
 
 ```bash
-# cat /var/lib/tftpboot/pxelinux.cfg/default
+# cat /opt/cloudboot/var/lib/tftpboot/pxelinux.cfg/default
 DEFAULT menu.c32
 PROMPT 0
 TIMEOUT 30
@@ -50,3 +50,28 @@ LABEL bootos
   APPEND initrd=http://osinstall.idcos.com/bootos/initrd.img console=tty0 selinux=0 biosdevname=0 SERVER_ADDR=http://osinstall.idcos.com DEVELOPER=1
   IPAPPEND 2
 ```
+
+## 高级选项
+
+BootOS内置agent，并自动启动，负责硬件信息的采集和硬件初始化配置。这里提供了两个接口，可以方便调用用户自己的脚本，做一些更复杂的操作。
+
+```bash
+# cat /opt/cloudboot/var/lib/tftpboot/pxelinux.cfg/default
+DEFAULT menu.c32
+PROMPT 0
+TIMEOUT 30
+
+LABEL bootos
+  MENU LABEL ^BootOS
+  MENU DEFAULT
+  KERNEL http://osinstall.idcos.com/bootos/vmlinuz
+  APPEND initrd=http://osinstall.idcos.com/bootos/initrd.img console=tty0 selinux=0 biosdevname=0 SERVER_ADDR=http://osinstall.idcos.com PRE=http://osinstall.idcos.com/pre.sh POST=http://osinstall.idcos.com/post.py
+  IPAPPEND 2
+```
+
+参数说明：
+
+* 设定参数```PRE=http://osinstall.idcos.com/pre.sh```，agent会在启动以后首先从指定URL获取程序并执行，程序可以是脚本也可以是二进制文件
+* 设定参数```POST=http://osinstall.idcos.com/post.py```，agent会在重启系统之前从指定URL获取程序并执行，程序可以是脚本也可以是二进制文件
+
+用户可以通过调用POST接口执行一些个性化的配置，例如个性化Raid配置，采集更多的系统信息等。
