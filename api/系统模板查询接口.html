@@ -1,784 +1,736 @@
+
 <!DOCTYPE HTML>
-<html lang="en" >
-    
+<html lang="" >
     <head>
-        
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>系统模板查询接口 |  x86服务器安装开发文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>系统模板查询接口 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.5">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
+    
     <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
-        
     
+        
     
 
         
     
     
-    <link rel="next" href="../api/网络配置查询接口.html" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="网络配置查询接口.html" />
     
     
-    <link rel="prev" href="../api/pxe安装文件接口.html" />
+    <link rel="prev" href="pxe安装文件接口.html" />
     
 
-        
     </head>
     <body>
         
+<div class="book">
+    <div class="book-summary">
         
-    <div class="book"
-        data-level="8.7"
-        data-chapter-title="系统模板查询接口"
-        data-filepath="api/系统模板查询接口.md"
-        data-basepath=".."
-        data-revision="Mon Aug 29 2016 10:39:34 GMT+0800 (CST)"
-        data-innerlanguage="">
-    
-
-<div class="book-summary">
-    <nav role="navigation">
-        <ul class="summary">
             
-            
-            
-            
-
-            
-
-            
-    
-        <li class="chapter " data-level="0" data-path="index.html">
-            
-                
-                    <a href="../index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                        Introduction
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1" data-path="preface/index.html">
-            
-                
-                    <a href="../preface/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                        前言
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1" data-path="preface/目标读者.html">
-            
-                
-                    <a href="../preface/目标读者.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.</b>
-                        
-                        目标读者
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="preface/目录结构.html">
-            
-                
-                    <a href="../preface/目录结构.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.</b>
-                        
-                        目录结构
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="preface/文档约定.html">
-            
-                
-                    <a href="../preface/文档约定.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.3.</b>
-                        
-                        文档约定
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="2" data-path="platform/index.html">
-            
-                
-                    <a href="../platform/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                        平台架构
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="2.1" data-path="platform/系统服务架构.html">
-            
-                
-                    <a href="../platform/系统服务架构.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.1.</b>
-                        
-                        系统服务架构
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="platform/系统功能模块.html">
-            
-                
-                    <a href="../platform/系统功能模块.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.</b>
-                        
-                        系统功能模块
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="platform/系统安装流程.html">
-            
-                
-                    <a href="../platform/系统安装流程.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.3.</b>
-                        
-                        系统安装流程
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.4" data-path="platform/新硬件升级流程.html">
-            
-                
-                    <a href="../platform/新硬件升级流程.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.4.</b>
-                        
-                        新硬件升级流程
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="3" data-path="environment/index.html">
-            
-                
-                    <a href="../environment/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        环境搭建
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.1" data-path="environment/一键部署.html">
-            
-                
-                    <a href="../environment/一键部署.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.1.</b>
-                        
-                        一键部署
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="4" data-path="bootos/index.html">
-            
-                
-                    <a href="../bootos/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                        BootOS开发
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.1" data-path="bootos/BootOS介绍.html">
-            
-                
-                    <a href="../bootos/BootOS介绍.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.1.</b>
-                        
-                        BootOS介绍
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="bootos/BootOS使用.html">
-            
-                
-                    <a href="../bootos/BootOS使用.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.2.</b>
-                        
-                        BootOS使用
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="bootos/BootOS驱动更新.html">
-            
-                
-                    <a href="../bootos/BootOS驱动更新.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.3.</b>
-                        
-                        BootOS驱动更新
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="bootos/BootOS重新打包.html">
-            
-                
-                    <a href="../bootos/BootOS重新打包.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.4.</b>
-                        
-                        BootOS重新打包
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="hardware/index.html">
-            
-                
-                    <a href="../hardware/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.</b>
-                        
-                        硬件配置开发
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="hardware/硬件配置基础.html">
-            
-                
-                    <a href="../hardware/硬件配置基础.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.1.</b>
-                        
-                        硬件配置基础
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="hardware/硬件配置开发规范.html">
-            
-                
-                    <a href="../hardware/硬件配置开发规范.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.2.</b>
-                        
-                        硬件配置开发规范
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="hardware/硬件工具包开发.html">
-            
-                
-                    <a href="../hardware/硬件工具包开发.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.3.</b>
-                        
-                        硬件工具包开发
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="hardware/硬件工具打包规范.html">
-            
-                
-                    <a href="../hardware/硬件工具打包规范.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.4.</b>
-                        
-                        硬件工具打包规范
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="os/index.html">
-            
-                
-                    <a href="../os/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.</b>
-                        
-                        系统模板定制
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="6.1" data-path="os/自动化安装基础.html">
-            
-                
-                    <a href="../os/自动化安装基础.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.1.</b>
-                        
-                        自动化安装基础
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="os/PXE模板定制规范.html">
-            
-                
-                    <a href="../os/PXE模板定制规范.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.2.</b>
-                        
-                        PXE模板定制规范
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="os/Linux安装模板.html">
-            
-                
-                    <a href="../os/Linux安装模板.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.3.</b>
-                        
-                        Linux安装模板
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.4" data-path="os/VMware安装模板.html">
-            
-                
-                    <a href="../os/VMware安装模板.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.4.</b>
-                        
-                        VMware安装模板
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.5" data-path="os/Windows安装模板.html">
-            
-                
-                    <a href="../os/Windows安装模板.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.5.</b>
-                        
-                        Windows安装模板
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.6" data-path="os/XenServer安装模板.html">
-            
-                
-                    <a href="../os/XenServer安装模板.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.6.</b>
-                        
-                        XenServer安装模板
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="vm/index.html">
-            
-                
-                    <a href="../vm/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        虚拟机管理
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="7.1" data-path="vm/宿主机环境搭建.html">
-            
-                
-                    <a href="../vm/宿主机环境搭建.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.1.</b>
-                        
-                        宿主机环境搭建
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.2" data-path="vm/虚拟机管理介绍.html">
-            
-                
-                    <a href="../vm/虚拟机管理介绍.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.2.</b>
-                        
-                        虚拟机管理介绍
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="8" data-path="api/index.html">
-            
-                
-                    <a href="../api/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.</b>
-                        
-                        平台开发接口
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="8.1" data-path="api/用户相关接口.html">
-            
-                
-                    <a href="../api/用户相关接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.1.</b>
-                        
-                        用户相关接口
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.2" data-path="api/数据录入接口.html">
-            
-                
-                    <a href="../api/数据录入接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.2.</b>
-                        
-                        数据录入接口
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.3" data-path="api/状态查询接口.html">
-            
-                
-                    <a href="../api/状态查询接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.3.</b>
-                        
-                        状态查询接口
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.4" data-path="api/日志进度上报接口.html">
-            
-                
-                    <a href="../api/日志进度上报接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.4.</b>
-                        
-                        日志进度上报接口
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.5" data-path="api/硬件配置模板接口.html">
-            
-                
-                    <a href="../api/硬件配置模板接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.5.</b>
-                        
-                        硬件配置模板接口
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.6" data-path="api/pxe安装文件接口.html">
-            
-                
-                    <a href="../api/pxe安装文件接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.6.</b>
-                        
-                        pxe安装文件接口
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="8.7" data-path="api/系统模板查询接口.html">
-            
-                
-                    <a href="../api/系统模板查询接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.7.</b>
-                        
-                        系统模板查询接口
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.8" data-path="api/网络配置查询接口.html">
-            
-                
-                    <a href="../api/网络配置查询接口.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.8.</b>
-                        
-                        网络配置查询接口
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="9" data-path="append/index.html">
-            
-                
-                    <a href="../append/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>9.</b>
-                        
-                        附录
-                    </a>
-            
-            
-        </li>
-    
-
-
-            
-            <li class="divider"></li>
-            <li>
-                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                    Published with GitBook
-                </a>
-            </li>
-            
-        </ul>
-    </nav>
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
 </div>
 
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../preface/">
+            
+                <a href="../preface/">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../preface/目标读者.html">
+            
+                <a href="../preface/目标读者.html">
+            
+                    
+                    目标读者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../preface/目录结构.html">
+            
+                <a href="../preface/目录结构.html">
+            
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../preface/文档约定.html">
+            
+                <a href="../preface/文档约定.html">
+            
+                    
+                    文档约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../platform/">
+            
+                <a href="../platform/">
+            
+                    
+                    平台架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../platform/系统服务架构.html">
+            
+                <a href="../platform/系统服务架构.html">
+            
+                    
+                    系统服务架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../platform/系统功能模块.html">
+            
+                <a href="../platform/系统功能模块.html">
+            
+                    
+                    系统功能模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../platform/系统安装流程.html">
+            
+                <a href="../platform/系统安装流程.html">
+            
+                    
+                    系统安装流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../platform/新硬件升级流程.html">
+            
+                <a href="../platform/新硬件升级流程.html">
+            
+                    
+                    新硬件升级流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../environment/">
+            
+                <a href="../environment/">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../environment/一键部署.html">
+            
+                <a href="../environment/一键部署.html">
+            
+                    
+                    一键部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../bootos/">
+            
+                <a href="../bootos/">
+            
+                    
+                    BootOS开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../bootos/BootOS介绍.html">
+            
+                <a href="../bootos/BootOS介绍.html">
+            
+                    
+                    BootOS介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../bootos/BootOS使用.html">
+            
+                <a href="../bootos/BootOS使用.html">
+            
+                    
+                    BootOS使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../bootos/BootOS驱动更新.html">
+            
+                <a href="../bootos/BootOS驱动更新.html">
+            
+                    
+                    BootOS驱动更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../bootos/BootOS重新打包.html">
+            
+                <a href="../bootos/BootOS重新打包.html">
+            
+                    
+                    BootOS重新打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../hardware/">
+            
+                <a href="../hardware/">
+            
+                    
+                    硬件配置开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../hardware/硬件配置基础.html">
+            
+                <a href="../hardware/硬件配置基础.html">
+            
+                    
+                    硬件配置基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../hardware/硬件工具包使用.html">
+            
+                <a href="../hardware/硬件工具包使用.html">
+            
+                    
+                    硬件工具包使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../hardware/硬件工具包开发.html">
+            
+                <a href="../hardware/硬件工具包开发.html">
+            
+                    
+                    硬件工具包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../hardware/硬件工具打包规范.html">
+            
+                <a href="../hardware/硬件工具打包规范.html">
+            
+                    
+                    硬件工具打包规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../os/">
+            
+                <a href="../os/">
+            
+                    
+                    系统模板定制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../os/自动化安装基础.html">
+            
+                <a href="../os/自动化安装基础.html">
+            
+                    
+                    自动化安装基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../os/PXE模板定制规范.html">
+            
+                <a href="../os/PXE模板定制规范.html">
+            
+                    
+                    PXE模板定制规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../os/Linux安装模板.html">
+            
+                <a href="../os/Linux安装模板.html">
+            
+                    
+                    Linux安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../os/VMware安装模板.html">
+            
+                <a href="../os/VMware安装模板.html">
+            
+                    
+                    VMware安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../os/Windows安装模板.html">
+            
+                <a href="../os/Windows安装模板.html">
+            
+                    
+                    Windows安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../os/XenServer安装模板.html">
+            
+                <a href="../os/XenServer安装模板.html">
+            
+                    
+                    XenServer安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../vm/">
+            
+                <a href="../vm/">
+            
+                    
+                    虚拟机管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../vm/宿主机环境搭建.html">
+            
+                <a href="../vm/宿主机环境搭建.html">
+            
+                    
+                    宿主机环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../vm/虚拟机管理介绍.html">
+            
+                <a href="../vm/虚拟机管理介绍.html">
+            
+                    
+                    虚拟机管理介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    平台开发接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="用户相关接口.html">
+            
+                <a href="用户相关接口.html">
+            
+                    
+                    用户相关接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="数据录入接口.html">
+            
+                <a href="数据录入接口.html">
+            
+                    
+                    数据录入接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="状态查询接口.html">
+            
+                <a href="状态查询接口.html">
+            
+                    
+                    状态查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="日志进度上报接口.html">
+            
+                <a href="日志进度上报接口.html">
+            
+                    
+                    日志进度上报接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="硬件配置模板接口.html">
+            
+                <a href="硬件配置模板接口.html">
+            
+                    
+                    硬件配置模板接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="pxe安装文件接口.html">
+            
+                <a href="pxe安装文件接口.html">
+            
+                    
+                    pxe安装文件接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.7" data-path="系统模板查询接口.html">
+            
+                <a href="系统模板查询接口.html">
+            
+                    
+                    系统模板查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="网络配置查询接口.html">
+            
+                <a href="网络配置查询接口.html">
+            
+                    
+                    网络配置查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../append/">
+            
+                <a href="../append/">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
     <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header" role="navigation">
-    <!-- Actions Left -->
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
     
 
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" > x86服务器安装开发文档</a>
+        <a href=".." >系统模板查询接口</a>
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1" role="main">
-                <div class="page-inner">
-                
-                
-                    <section class="normal" id="section-">
-                    
-                        <h1 id="&#x7CFB;&#x7EDF;&#x6A21;&#x677F;&#x67E5;&#x8BE2;&#x63A5;&#x53E3;">&#x7CFB;&#x7EDF;&#x6A21;&#x677F;&#x67E5;&#x8BE2;&#x63A5;&#x53E3;</h1>
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7CFB;&#x7EDF;&#x6A21;&#x677F;&#x67E5;&#x8BE2;&#x63A5;&#x53E3;">&#x7CFB;&#x7EDF;&#x6A21;&#x677F;&#x67E5;&#x8BE2;&#x63A5;&#x53E3;</h1>
 <h2 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h2>
 <table>
 <thead>
@@ -832,148 +784,180 @@
 </tbody>
 </table>
 <h2 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x793A;&#x4F8B;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x793A;&#x4F8B;</h2>
-<pre><code class="lang-json">http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">8083</span><span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>device<span class="token operator">/</span>getSystemBySn<span class="token operator">?</span>sn<span class="token operator">=</span>test<span class="token operator">&amp;</span>type<span class="token operator">=</span>raw
+<pre class="language-"><code class="lang-json">http<span class="token operator">:</span>//localhost<span class="token operator">:</span><span class="token number">8083</span>/api/osinstall/v1/device/getSystemBySn?sn=test&amp;type=raw
 </code></pre>
 <h2 id="&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF08;php&#xFF09;">&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF08;PHP&#xFF09;</h2>
-<pre><code class="lang-php"><span class="token delimiter">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter">&lt;?php</span>
 <span class="token variable">$url</span> <span class="token operator">=</span> <span class="token string">&quot;http://localhost:8083/api/osinstall/v1/device/getSystemBySn?sn=test&amp;type=raw&quot;</span><span class="token punctuation">;</span>
-<span class="token variable">$content</span> <span class="token operator">=</span> <span class="token function">file_get_contents<span class="token punctuation">(</span></span><span class="token variable">$url</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$content</span> <span class="token operator">=</span> <span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">echo</span> <span class="token variable">$content</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x793A;&#x4F8B;</h2>
-<pre><code class="lang-bash"><span class="token function">install</span>
-url <span class="token operator">--</span>url<span class="token operator">=</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>mirror<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">6.7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>
-lang en_US<span class="token punctuation">.</span>UTF<span class="token operator">-</span><span class="token number">8</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">install</span>
+url --url<span class="token operator">=</span>http://mirror.idcos.com/centos/6.7/os/x86_64/
+lang en_US.UTF-8
 keyboard us
-network <span class="token operator">--</span>onboot <span class="token function">yes</span> <span class="token operator">--</span>device bootif <span class="token operator">--</span>bootproto dhcp <span class="token operator">--</span>noipv6
-rootpw  <span class="token operator">--</span>iscrypted <span class="token property">$6</span><span class="token property">$eAdCfx9hZjVMqyS6</span><span class="token property">$BYIbEu4zeKp0KLnz8rLMdU7sQ5o4hQRv55o151iLX7s2kSq</span><span class="token punctuation">.</span>5RVsteGWJlpPMqIRJ8<span class="token punctuation">.</span>WUcbZC3duqX0Rt3unK<span class="token operator">/</span>
-firewall <span class="token operator">--</span>disabled
-authconfig <span class="token operator">--</span>enableshadow <span class="token operator">--</span>passalgo<span class="token operator">=</span>sha512
-selinux <span class="token operator">--</span>disabled
-timezone Asia<span class="token operator">/</span>Shanghai
+network --onboot <span class="token function">yes</span> --device bootif --bootproto dhcp --noipv6
+rootpw  --iscrypted <span class="token variable">$6</span><span class="token variable">$eAdCfx9hZjVMqyS6</span><span class="token variable">$BYIbEu4zeKp0KLnz8rLMdU7sQ5o4hQRv55o151iLX7s2kSq</span>.5RVsteGWJlpPMqIRJ8.WUcbZC3duqX0Rt3unK/
+firewall --disabled
+authconfig --enableshadow --passalgo<span class="token operator">=</span>sha512
+selinux --disabled
+timezone Asia/Shanghai
 text
 <span class="token function">reboot</span>
 zerombr
-bootloader <span class="token operator">--</span>location<span class="token operator">=</span>mbr <span class="token operator">--</span>append<span class="token operator">=</span><span class="token string">&quot;console=tty0 biosdevname=0 audit=0 selinux=0&quot;</span>
-clearpart <span class="token operator">--</span>all <span class="token operator">--</span>initlabel
-part <span class="token operator">/</span>boot <span class="token operator">--</span>fstype<span class="token operator">=</span>ext4 <span class="token operator">--</span>size<span class="token operator">=</span><span class="token number">256</span> <span class="token operator">--</span>ondisk<span class="token operator">=</span>sda
-part swap <span class="token operator">--</span>size<span class="token operator">=</span><span class="token number">2048</span> <span class="token operator">--</span>ondisk<span class="token operator">=</span>sda
-part <span class="token operator">/</span> <span class="token operator">--</span>fstype<span class="token operator">=</span>ext4 <span class="token operator">--</span>size<span class="token operator">=</span><span class="token number">100</span> <span class="token operator">--</span>grow <span class="token operator">--</span>ondisk<span class="token operator">=</span>sda
+bootloader --location<span class="token operator">=</span>mbr --append<span class="token operator">=</span><span class="token string">&quot;console=tty0 biosdevname=0 audit=0 selinux=0&quot;</span>
+clearpart --all --initlabel
+part /boot --fstype<span class="token operator">=</span>ext4 --size<span class="token operator">=</span>256 --ondisk<span class="token operator">=</span>sda
+part swap --size<span class="token operator">=</span>2048 --ondisk<span class="token operator">=</span>sda
+part / --fstype<span class="token operator">=</span>ext4 --size<span class="token operator">=</span>100 --grow --ondisk<span class="token operator">=</span>sda
 
-<span class="token operator">%</span>packages <span class="token operator">--</span>ignoremissing
+%packages --ignoremissing
 @base
 @core
 @development
 
-<span class="token operator">%</span>pre
-_sn<span class="token operator">=</span>$<span class="token punctuation">(</span>dmidecode <span class="token operator">-</span>s system<span class="token operator">-</span>serial<span class="token operator">-</span>number <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">|</span> <span class="token function">awk</span> &apos;<span class="token operator">/</span><span class="token operator">^</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token comment" spellcheck="true">#]/ { print $1 }&apos;)
-</span>curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x542F;&#x52A8;OS&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;\&quot;,\&quot;InstallProgress\&quot;:0.6,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
-curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x5206;&#x533A;&#x5E76;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;\&quot;,\&quot;InstallProgress\&quot;:0.7,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
+%pre
+_sn<span class="token operator">=</span><span class="token punctuation">$(</span>dmidecode -s system-serial-number 2<span class="token operator">&gt;</span>/dev/null <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;/^[^#]/ { print <span class="token variable">$1</span> }&apos;</span><span class="token punctuation">)</span>
+curl -H <span class="token string">&quot;Content-Type: application/json&quot;</span> -X POST -d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token variable">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x542F;&#x52A8;OS&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;\&quot;,\&quot;InstallProgress\&quot;:0.6,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http://osinstall.idcos.com/api/osinstall/v1/report/deviceInstallInfo
+curl -H <span class="token string">&quot;Content-Type: application/json&quot;</span> -X POST -d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token variable">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;&#x5206;&#x533A;&#x5E76;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;\&quot;,\&quot;InstallProgress\&quot;:0.7,\&quot;InstallLog\&quot;:\&quot;SW5zdGFsbCBPUwo=\&quot;}&quot;</span> http://osinstall.idcos.com/api/osinstall/v1/report/deviceInstallInfo
 
-<span class="token operator">%</span>post
+%post
 progress<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    curl <span class="token operator">-</span>H <span class="token string">&quot;Content-Type: application/json&quot;</span> <span class="token operator">-</span>X POST <span class="token operator">-</span>d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token property">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;<span class="token property">$1</span>\&quot;,\&quot;InstallProgress\&quot;:<span class="token property">$2</span>,\&quot;InstallLog\&quot;:\&quot;<span class="token property">$3</span>\&quot;}&quot;</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>osinstall<span class="token punctuation">.</span>idcos<span class="token punctuation">.</span>com<span class="token operator">/</span>api<span class="token operator">/</span>osinstall<span class="token operator">/</span>v1<span class="token operator">/</span>report<span class="token operator">/</span>deviceInstallInfo
+    curl -H <span class="token string">&quot;Content-Type: application/json&quot;</span> -X POST -d <span class="token string">&quot;{\&quot;Sn\&quot;:\&quot;<span class="token variable">$_sn</span>\&quot;,\&quot;Title\&quot;:\&quot;<span class="token variable">$1</span>\&quot;,\&quot;InstallProgress\&quot;:<span class="token variable">$2</span>,\&quot;InstallLog\&quot;:\&quot;<span class="token variable">$3</span>\&quot;}&quot;</span> http://osinstall.idcos.com/api/osinstall/v1/report/deviceInstallInfo
 <span class="token punctuation">}</span>
 
-_sn<span class="token operator">=</span>$<span class="token punctuation">(</span>dmidecode <span class="token operator">-</span>s system<span class="token operator">-</span>serial<span class="token operator">-</span>number <span class="token number">2</span><span class="token operator">&gt;</span><span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">|</span> <span class="token function">awk</span> &apos;<span class="token operator">/</span><span class="token operator">^</span><span class="token punctuation">[</span><span class="token operator">^</span><span class="token comment" spellcheck="true">#]/ { print $1 }&apos;)
-</span>
-progress <span class="token string">&quot;&#x914D;&#x7F6E;&#x4E3B;&#x673A;&#x540D;&#x548C;&#x7F51;&#x7EDC;&quot;</span> <span class="token number">0.8</span> <span class="token string">&quot;Y29uZmlnIG5ldHdvcmsK&quot;</span>
+_sn<span class="token operator">=</span><span class="token punctuation">$(</span>dmidecode -s system-serial-number 2<span class="token operator">&gt;</span>/dev/null <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;/^[^#]/ { print <span class="token variable">$1</span> }&apos;</span><span class="token punctuation">)</span>
 
-<span class="token comment" spellcheck="true"># config network
-</span><span class="token function">cat</span> <span class="token operator">&gt;</span> <span class="token operator">/</span>etc<span class="token operator">/</span>modprobe<span class="token punctuation">.</span>d<span class="token operator">/</span>disable_ipv6<span class="token punctuation">.</span>conf <span class="token operator">&lt;</span><span class="token operator">&lt;</span>EOF
-<span class="token function">install</span> ipv6 <span class="token operator">/</span>bin<span class="token operator">/</span><span class="token boolean">true</span>
-EOF
+progress <span class="token string">&quot;&#x914D;&#x7F6E;&#x4E3B;&#x673A;&#x540D;&#x548C;&#x7F51;&#x7EDC;&quot;</span> 0.8 <span class="token string">&quot;Y29uZmlnIG5ldHdvcmsK&quot;</span>
 
-curl <span class="token operator">-</span>o <span class="token operator">/</span>tmp<span class="token operator">/</span>networkinfo <span class="token string">&quot;http://osinstall.idcos.com/api/osinstall/v1/device/getNetworkBySn?sn=<span class="token property">${_sn}</span>&amp;type=raw&quot;</span>
-<span class="token function">source</span> <span class="token operator">/</span>tmp<span class="token operator">/</span>networkinfo
+<span class="token comment" spellcheck="true"># config network</span>
+<span class="token function">cat</span> <span class="token operator">&gt;</span> /etc/modprobe.d/disable_ipv6.conf <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+install ipv6 /bin/true
+EOF</span>
 
-<span class="token function">cat</span> <span class="token operator">&gt;</span> <span class="token operator">/</span>etc<span class="token operator">/</span>sysconfig<span class="token operator">/</span>network <span class="token operator">&lt;</span><span class="token operator">&lt;</span>EOF
-NETWORKING<span class="token operator">=</span><span class="token function">yes</span>
-HOSTNAME<span class="token operator">=</span><span class="token property">$HOSTNAME</span>
-GATEWAY<span class="token operator">=</span><span class="token property">$GATEWAY</span>
-NOZEROCONF<span class="token operator">=</span><span class="token function">yes</span>
-NETWORKING_IPV6<span class="token operator">=</span>no
-IPV6INIT<span class="token operator">=</span>no
-PEERNTP<span class="token operator">=</span>no
-EOF
+curl -o /tmp/networkinfo <span class="token string">&quot;http://osinstall.idcos.com/api/osinstall/v1/device/getNetworkBySn?sn=<span class="token variable">${_sn}</span>&amp;type=raw&quot;</span>
+<span class="token function">source</span> /tmp/networkinfo
 
-<span class="token function">cat</span> <span class="token operator">&gt;</span> <span class="token operator">/</span>etc<span class="token operator">/</span>sysconfig<span class="token operator">/</span>network<span class="token operator">-</span>scripts<span class="token operator">/</span>ifcfg<span class="token operator">-</span>eth0 <span class="token operator">&lt;</span><span class="token operator">&lt;</span>EOF
-DEVICE<span class="token operator">=</span>eth0
-BOOTPROTO<span class="token operator">=</span>static
-IPADDR<span class="token operator">=</span><span class="token property">$IPADDR</span>
-NETMASK<span class="token operator">=</span><span class="token property">$NETMASK</span>
-ONBOOT<span class="token operator">=</span><span class="token function">yes</span>
-TYPE<span class="token operator">=</span>Ethernet
-NM_CONTROLLED<span class="token operator">=</span>no
-EOF
+<span class="token function">cat</span> <span class="token operator">&gt;</span> /etc/sysconfig/network <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+NETWORKING=yes
+HOSTNAME=<span class="token variable">$HOSTNAME</span>
+GATEWAY=<span class="token variable">$GATEWAY</span>
+NOZEROCONF=yes
+NETWORKING_IPV6=no
+IPV6INIT=no
+PEERNTP=no
+EOF</span>
 
-progress <span class="token string">&quot;&#x6DFB;&#x52A0;&#x7528;&#x6237;&quot;</span> <span class="token number">0.85</span> <span class="token string">&quot;YWRkIHVzZXIgeXVuamkK&quot;</span>
+<span class="token function">cat</span> <span class="token operator">&gt;</span> /etc/sysconfig/network-scripts/ifcfg-eth0 <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+DEVICE=eth0
+BOOTPROTO=static
+IPADDR=<span class="token variable">$IPADDR</span>
+NETMASK=<span class="token variable">$NETMASK</span>
+ONBOOT=yes
+TYPE=Ethernet
+NM_CONTROLLED=no
+EOF</span>
+
+progress <span class="token string">&quot;&#x6DFB;&#x52A0;&#x7528;&#x6237;&quot;</span> 0.85 <span class="token string">&quot;YWRkIHVzZXIgeXVuamkK&quot;</span>
 <span class="token function">useradd</span> yunji
 
-progress <span class="token string">&quot;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&quot;</span> <span class="token number">0.9</span> <span class="token string">&quot;Y29uZmlnIHN5c3RlbSBzZXJ2aWNlCg==&quot;</span>
+progress <span class="token string">&quot;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&quot;</span> 0.9 <span class="token string">&quot;Y29uZmlnIHN5c3RlbSBzZXJ2aWNlCg==&quot;</span>
 
-<span class="token comment" spellcheck="true"># config service
-</span><span class="token function">service</span><span class="token operator">=</span><span class="token punctuation">(</span>crond network ntpd rsyslog sshd sysstat<span class="token punctuation">)</span>
-<span class="token function">chkconfig</span> <span class="token operator">--</span>list <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{ print <span class="token property">$1</span> }&apos;</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token operator">-</span>n1 <span class="token operator">-</span>I@ <span class="token function">chkconfig</span> @ off
-<span class="token keyword">echo</span> <span class="token property">${service[@]}</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token operator">-</span>n1 <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token operator">-</span>I@ <span class="token function">chkconfig</span> @ on
+<span class="token comment" spellcheck="true"># config service</span>
+service<span class="token operator">=</span><span class="token punctuation">(</span>crond network ntpd rsyslog sshd sysstat<span class="token punctuation">)</span>
+<span class="token function">chkconfig</span> --list <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{ print <span class="token variable">$1</span> }&apos;</span> <span class="token operator">|</span> <span class="token function">xargs</span> -n1 -I@ <span class="token function">chkconfig</span> @ off
+<span class="token keyword">echo</span> <span class="token variable">${service[@]}</span> <span class="token operator">|</span> <span class="token function">xargs</span> -n1 <span class="token operator">|</span> <span class="token function">xargs</span> -I@ <span class="token function">chkconfig</span> @ on
 
-progress <span class="token string">&quot;&#x8C03;&#x6574;&#x7CFB;&#x7EDF;&#x53C2;&#x6570;&quot;</span> <span class="token number">0.95</span> <span class="token string">&quot;Y29uZmlnIGJhc2ggcHJvbXB0Cg==&quot;</span>
+progress <span class="token string">&quot;&#x8C03;&#x6574;&#x7CFB;&#x7EDF;&#x53C2;&#x6570;&quot;</span> 0.95 <span class="token string">&quot;Y29uZmlnIGJhc2ggcHJvbXB0Cg==&quot;</span>
 
-<span class="token comment" spellcheck="true"># custom bash prompt
-</span><span class="token function">cat</span> <span class="token operator">&gt;</span><span class="token operator">&gt;</span> <span class="token operator">/</span>etc<span class="token operator">/</span>profile <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token string">&apos;EOF&apos;</span>
+<span class="token comment" spellcheck="true"># custom bash prompt</span>
+<span class="token function">cat</span> <span class="token operator">&gt;&gt;</span> /etc/profile <span class="token operator">&lt;&lt;</span><span class="token string">&apos;EOF&apos;
 
-<span class="token function">export</span> LANG<span class="token operator">=</span>en_US<span class="token punctuation">.</span>UTF8
-<span class="token function">export</span> PS1<span class="token operator">=</span><span class="token string">&apos;\n\e[1;37m[\e[m\e[1;32m\u\e[m\e[1;33m@\e[m\e[1;35m\H\e[m:\e[4m`pwd`\e[m\e[1;37m]\e[m\e[1;36m\e[m\n\$ &apos;</span>
-<span class="token function">export</span> HISTTIMEFORMAT<span class="token operator">=</span><span class="token string">&apos;[%F %T] &apos;</span>
-EOF
+export LANG=en_US.UTF8
+export PS1=&apos;\n\e[1;37m[\e[m\e[1;32m\u\e[m\e[1;33m@\e[m\e[1;35m\H\e[m:\e[4m<span class="token variable"><span class="token variable">`</span><span class="token function">pwd</span><span class="token variable">`</span></span>\e[m\e[1;37m]\e[m\e[1;36m\e[m\n\$ &apos;
+export HISTTIMEFORMAT=&apos;[%F %T] &apos;
+EOF</span>
 
-progress <span class="token string">&quot;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&quot;</span> <span class="token number">1</span> <span class="token string">&quot;aW5zdGFsbCBmaW5pc2hlZAo=&quot;</span>
+progress <span class="token string">&quot;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&quot;</span> 1 <span class="token string">&quot;aW5zdGFsbCBmaW5pc2hlZAo=&quot;</span>
 </code></pre>
 
-                    
-                    </section>
-                
-                
-                </div>
-            </div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
         </div>
-
-        
-        <a href="../api/pxe安装文件接口.html" class="navigation navigation-prev " aria-label="Previous page: pxe安装文件接口"><i class="fa fa-angle-left"></i></a>
-        
-        
-        <a href="../api/网络配置查询接口.html" class="navigation navigation-next " aria-label="Next page: 网络配置查询接口"><i class="fa fa-angle-right"></i></a>
-        
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
     </div>
 </div>
 
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pxe安装文件接口.html" class="navigation navigation-prev " aria-label="Previous page: pxe安装文件接口">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="网络配置查询接口.html" class="navigation navigation-next " aria-label="Next page: 网络配置查询接口">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
         
-<script src="../gitbook/app.js"></script>
+    </div>
 
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
-    
-
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"prism":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
-    gitbook.start(config);
-});
-</script>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"系统模板查询接口","level":"1.9.7","depth":2,"next":{"title":"网络配置查询接口","level":"1.9.8","depth":2,"path":"api/网络配置查询接口.md","ref":"api/网络配置查询接口.md","articles":[]},"previous":{"title":"pxe安装文件接口","level":"1.9.6","depth":2,"path":"api/pxe安装文件接口.md","ref":"api/pxe安装文件接口.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":null,"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"","links":{"sidebar":{},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":null,"extension":null},"file":{"path":"api/系统模板查询接口.md","mtime":"2017-01-18T06:53:00.257Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-18T06:54:04.123Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
 
         
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
     </body>
-    
 </html>
+
