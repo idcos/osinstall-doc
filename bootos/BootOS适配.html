@@ -1,0 +1,1664 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>BootOS适配 · osinstall-doc</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../hardware/" />
+    
+    
+    <link rel="prev" href="BootOS使用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../preface/">
+            
+                <a href="../preface/">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../preface/目标读者.html">
+            
+                <a href="../preface/目标读者.html">
+            
+                    
+                    目标读者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../preface/目录结构.html">
+            
+                <a href="../preface/目录结构.html">
+            
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../preface/文档约定.html">
+            
+                <a href="../preface/文档约定.html">
+            
+                    
+                    文档约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../platform/">
+            
+                <a href="../platform/">
+            
+                    
+                    平台架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../platform/系统服务架构.html">
+            
+                <a href="../platform/系统服务架构.html">
+            
+                    
+                    系统服务架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../platform/系统功能模块.html">
+            
+                <a href="../platform/系统功能模块.html">
+            
+                    
+                    系统功能模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../platform/系统安装流程.html">
+            
+                <a href="../platform/系统安装流程.html">
+            
+                    
+                    系统安装流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../platform/新硬件升级流程.html">
+            
+                <a href="../platform/新硬件升级流程.html">
+            
+                    
+                    新硬件升级流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../environment/">
+            
+                <a href="../environment/">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../environment/一键部署.html">
+            
+                <a href="../environment/一键部署.html">
+            
+                    
+                    一键部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    BootOS介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="BootOS概述.html">
+            
+                <a href="BootOS概述.html">
+            
+                    
+                    BootOS概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="BootOS使用.html">
+            
+                <a href="BootOS使用.html">
+            
+                    
+                    BootOS使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="BootOS适配.html">
+            
+                <a href="BootOS适配.html">
+            
+                    
+                    BootOS适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../hardware/">
+            
+                <a href="../hardware/">
+            
+                    
+                    硬件配置开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../hardware/硬件配置基础.html">
+            
+                <a href="../hardware/硬件配置基础.html">
+            
+                    
+                    硬件配置基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../hardware/硬件工具包使用.html">
+            
+                <a href="../hardware/硬件工具包使用.html">
+            
+                    
+                    硬件工具包使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../hardware/硬件工具包开发.html">
+            
+                <a href="../hardware/硬件工具包开发.html">
+            
+                    
+                    硬件工具包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../hardware/硬件工具打包规范.md">
+            
+                <span>
+            
+                    
+                    硬件工具打包规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../os/">
+            
+                <a href="../os/">
+            
+                    
+                    系统模板定制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../os/自动化安装基础.html">
+            
+                <a href="../os/自动化安装基础.html">
+            
+                    
+                    自动化安装基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../os/PXE模板定制规范.html">
+            
+                <a href="../os/PXE模板定制规范.html">
+            
+                    
+                    PXE模板定制规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../os/Linux安装模板.html">
+            
+                <a href="../os/Linux安装模板.html">
+            
+                    
+                    Linux安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../os/VMware安装模板.html">
+            
+                <a href="../os/VMware安装模板.html">
+            
+                    
+                    VMware安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../os/Windows安装模板.html">
+            
+                <a href="../os/Windows安装模板.html">
+            
+                    
+                    Windows安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../os/XenServer安装模板.html">
+            
+                <a href="../os/XenServer安装模板.html">
+            
+                    
+                    XenServer安装模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../api/">
+            
+                <a href="../api/">
+            
+                    
+                    平台开发接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../api/用户相关接口.html">
+            
+                <a href="../api/用户相关接口.html">
+            
+                    
+                    用户相关接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../api/数据录入接口.html">
+            
+                <a href="../api/数据录入接口.html">
+            
+                    
+                    数据录入接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../api/状态查询接口.html">
+            
+                <a href="../api/状态查询接口.html">
+            
+                    
+                    状态查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../api/日志进度上报接口.html">
+            
+                <a href="../api/日志进度上报接口.html">
+            
+                    
+                    日志进度上报接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../api/硬件配置模板接口.html">
+            
+                <a href="../api/硬件配置模板接口.html">
+            
+                    
+                    硬件配置模板接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../api/pxe安装文件接口.html">
+            
+                <a href="../api/pxe安装文件接口.html">
+            
+                    
+                    pxe安装文件接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../api/系统模板查询接口.html">
+            
+                <a href="../api/系统模板查询接口.html">
+            
+                    
+                    系统模板查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../api/网络配置查询接口.html">
+            
+                <a href="../api/网络配置查询接口.html">
+            
+                    
+                    网络配置查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../append/">
+            
+                <a href="../append/">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >BootOS适配</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="bootos&#x9002;&#x914D;">BootOS&#x9002;&#x914D;</h1>
+<p>BootOS&#x7CBE;&#x7B80;&#x4E86;&#x5927;&#x90E8;&#x5206;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;&#x7CFB;&#x7EDF;&#x6838;&#x5FC3;&#x548C;&#x786C;&#x4EF6;&#x652F;&#x6301;&#x5FC5;&#x5907;&#x7684;&#x9A71;&#x52A8;&#x3002;&#x5F53;&#x524D;&#x652F;&#x6301;&#x7684;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x5217;&#x8868;&#x5982;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x8BF7;&#x6309;&#x7167;&#x6587;&#x6863;&#x91CC;&#x9762;&#x7684;&#x8BF4;&#x660E;&#x53CA;&#x65F6;&#x53CD;&#x9988;&#x7ED9;&#x6211;&#x4EEC;&#x3002;</p>
+<h2 id="&#x652F;&#x6301;&#x7684;&#x786C;&#x4EF6;&#x8BBE;&#x5907;">&#x652F;&#x6301;&#x7684;&#x786C;&#x4EF6;&#x8BBE;&#x5907;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x9A71;&#x52A8;&#x540D;&#x79F0;</th>
+<th>&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</th>
+<th>&#x9A71;&#x52A8;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exar Serial Driver</td>
+<td>8250_exar</td>
+<td></td>
+</tr>
+<tr>
+<td>Intel LPSS UART driver</td>
+<td>8250_lpss</td>
+<td></td>
+</tr>
+<tr>
+<td>MOXA SmartIO MUE driver</td>
+<td>8250_moxa</td>
+<td></td>
+</tr>
+<tr>
+<td>Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID &amp; ICP SCSI driver</td>
+<td>aacraid</td>
+<td>1.2.1[50877]-custom</td>
+</tr>
+<tr>
+<td>Altera University Program PS2 controller driver</td>
+<td>altera_ps2</td>
+<td></td>
+</tr>
+<tr>
+<td>ARC PS/2 Driver</td>
+<td>arc_ps2</td>
+<td></td>
+</tr>
+<tr>
+<td>ARC(Synopsys) On-Chip(fpga) serial driver</td>
+<td>arc_uart</td>
+<td></td>
+</tr>
+<tr>
+<td>QLogic BCM5706/5708/5709/5716 Driver</td>
+<td>bnx2</td>
+<td>2.2.6</td>
+</tr>
+<tr>
+<td>QLogic BCM57710/57711/57711E/57712/57712_MF/57800/57800_MF/57810/57810_MF/57840/57840_MF Driver</td>
+<td>bnx2x</td>
+<td>1.712.30-0</td>
+</tr>
+<tr>
+<td></td>
+<td>bridge</td>
+<td>2.3</td>
+</tr>
+<tr>
+<td>CRC32c (Castagnoli) optimization using Intel Hardware.</td>
+<td>crc32c-intel</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>dca</td>
+<td>1.12.1</td>
+</tr>
+<tr>
+<td>Intel(R) PRO/1000 Network Driver</td>
+<td>e1000e</td>
+<td>3.2.6-k</td>
+</tr>
+<tr>
+<td>Intel(R) PRO/1000 Network Driver</td>
+<td>e1000</td>
+<td>7.3.21-k8-NAPI</td>
+</tr>
+<tr>
+<td>Generic failover infrastructure/interface</td>
+<td>failover</td>
+<td></td>
+</tr>
+<tr>
+<td>Force feedback support for memoryless devices</td>
+<td>ff-memless</td>
+<td></td>
+</tr>
+<tr>
+<td>Keyboard driver for GPIOs</td>
+<td>gpio_keys</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-a4tech</td>
+<td></td>
+</tr>
+<tr>
+<td>Elo Accutouch HID TouchScreen driver</td>
+<td>hid-accutouch</td>
+<td></td>
+</tr>
+<tr>
+<td>ALPS HID driver</td>
+<td>hid-alps</td>
+<td></td>
+</tr>
+<tr>
+<td>HID Apple IR remote controls</td>
+<td>hid-appleir</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-apple</td>
+<td></td>
+</tr>
+<tr>
+<td>Asus HID Keyboard and TouchPad</td>
+<td>hid-asus</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-aureal</td>
+<td></td>
+</tr>
+<tr>
+<td>Force feedback support for ACRUX game controllers</td>
+<td>hid-axff</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-belkin</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-betopff</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-cherry</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-chicony</td>
+<td></td>
+</tr>
+<tr>
+<td>CM6533 HID jack controls</td>
+<td>hid-cmedia</td>
+<td></td>
+</tr>
+<tr>
+<td>HID driver for Corsair devices</td>
+<td>hid-corsair</td>
+<td></td>
+</tr>
+<tr>
+<td>Cougar 500k Gaming Keyboard</td>
+<td>hid-cougar</td>
+<td></td>
+</tr>
+<tr>
+<td>Silicon Labs HID USB to SMBus master bridge</td>
+<td>hid-cp2112</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-cypress</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-dr</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for HID ELAN Touchpads</td>
+<td>hid-elan</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-elecom</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-elo</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-emsff</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-ezkey</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-gaff</td>
+<td></td>
+</tr>
+<tr>
+<td>HID Gembird joypad driver</td>
+<td>hid-gembird</td>
+<td></td>
+</tr>
+<tr>
+<td>Google Fiber TV Box remote control driver</td>
+<td>hid-gfrm</td>
+<td></td>
+</tr>
+<tr>
+<td>MSI GT683R led driver</td>
+<td>hid-gt683r</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-gyration</td>
+<td></td>
+</tr>
+<tr>
+<td>Force feedback support for Holtek On Line Grip based devices</td>
+<td>hid-holtekff</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-holtek-kbd</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-holtek-mouse</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-hyperv</td>
+<td></td>
+</tr>
+<tr>
+<td>ION iCade input driver</td>
+<td>hid-icade</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-ite</td>
+<td></td>
+</tr>
+<tr>
+<td>Jabra USB HID Driver</td>
+<td>hid-jabra</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-kensington</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-keytouch</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-kye</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-lcpower</td>
+<td></td>
+</tr>
+<tr>
+<td>Simple USB RGB LED driver</td>
+<td>hid-led</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-lenovo</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-logitech-dj</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-logitech-hidpp</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-logitech</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-mf</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-microsoft</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-monterey</td>
+<td></td>
+</tr>
+<tr>
+<td>HID multitouch panels</td>
+<td>hid-multitouch</td>
+<td></td>
+</tr>
+<tr>
+<td>HID driver for Network Technologies USB-SUN keyboard adapter</td>
+<td>hid-nti</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-ortek</td>
+<td></td>
+</tr>
+<tr>
+<td>PenMount HID TouchScreen driver</td>
+<td>hid-penmount</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-petalynx</td>
+<td></td>
+</tr>
+<tr>
+<td>Minibox graphics PicoLCD Driver</td>
+<td>hid-picolcd</td>
+<td></td>
+</tr>
+<tr>
+<td>Plantronics USB HID Driver</td>
+<td>hid-plantronics</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-pl</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-primax</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-prodikeys</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-retrode</td>
+<td></td>
+</tr>
+<tr>
+<td>RMI HID driver</td>
+<td>hid-rmi</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Arvo driver</td>
+<td>hid-roccat-arvo</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat common driver</td>
+<td>hid-roccat-common</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Isku/FX driver</td>
+<td>hid-roccat-isku</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat char device</td>
+<td>hid-roccat</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Kone driver</td>
+<td>hid-roccat-kone</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Kone[+]/XTD driver</td>
+<td>hid-roccat-koneplus</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat KonePure/Optical driver</td>
+<td>hid-roccat-konepure</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Kova[+] driver</td>
+<td>hid-roccat-kovaplus</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Lua driver</td>
+<td>hid-roccat-lua</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Pyra driver</td>
+<td>hid-roccat-pyra</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Ryos MK/Glow/Pro driver</td>
+<td>hid-roccat-ryos</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Roccat Savu driver</td>
+<td>hid-roccat-savu</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-saitek</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-samsung</td>
+<td></td>
+</tr>
+<tr>
+<td>HID Sensor Hub driver</td>
+<td>hid-sensor-hub</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-sjoy</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-sony</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-speedlink</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-steam</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-steelseries</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-sunplus</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-tivo</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-tmff</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-topseed</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-twinhan</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-uclogic</td>
+<td></td>
+</tr>
+<tr>
+<td>PS3 uDraw tablet driver</td>
+<td>hid-udraw-ps3</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-waltop</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for Nintendo Wii / Wii U peripherals</td>
+<td>hid-wiimote</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-xinmo</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-zpff</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hid-zydacron</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for HP Smart Array Controller version 3.4.20-125</td>
+<td>hpsa</td>
+<td>3.4.20-125</td>
+</tr>
+<tr>
+<td></td>
+<td>hv_vmbus</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>hyperv-keyboard</td>
+<td></td>
+</tr>
+<tr>
+<td>I2C-Bus bit-banging algorithm</td>
+<td>i2c-algo-bit</td>
+<td></td>
+</tr>
+<tr>
+<td>HID over I2C core driver</td>
+<td>i2c-hid</td>
+<td></td>
+</tr>
+<tr>
+<td>Intel(R) Gigabit Ethernet Network Driver</td>
+<td>igb</td>
+<td>5.4.0-k</td>
+</tr>
+<tr>
+<td>Intel(R) Gigabit Virtual Function Network Driver</td>
+<td>igbvf</td>
+<td>2.4.0-k</td>
+</tr>
+<tr>
+<td>Intel(R) Integrated Sensor Hub PCI Device Driver</td>
+<td>intel-ish-ipc</td>
+<td></td>
+</tr>
+<tr>
+<td>ISH ISHTP HID client driver</td>
+<td>intel-ishtp-hid</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>intel-ishtp</td>
+<td></td>
+</tr>
+<tr>
+<td>Linux device interface for the IPMI message handler.</td>
+<td>ipmi_devintf</td>
+<td></td>
+</tr>
+<tr>
+<td>Incoming and outgoing message routing for an IPMI interface.</td>
+<td>ipmi_msghandler</td>
+<td>39.2</td>
+</tr>
+<tr>
+<td>Interface to the IPMI driver for the KCS, SMIC, and BT system interfaces.</td>
+<td>ipmi_si</td>
+<td></td>
+</tr>
+<tr>
+<td>sysfs interface and helpers to export iSCSI boot information</td>
+<td>iscsi_boot_sysfs</td>
+<td></td>
+</tr>
+<tr>
+<td>sysfs interface to BIOS iBFT information</td>
+<td>iscsi_ibft</td>
+<td>0.5.0</td>
+</tr>
+<tr>
+<td>Intel(R) 10 Gigabit PCI Express Network Driver</td>
+<td>ixgbe</td>
+<td>5.1.0-k</td>
+</tr>
+<tr>
+<td>Intel(R) 10 Gigabit Virtual Function Network Driver</td>
+<td>ixgbevf</td>
+<td>4.1.0-k</td>
+</tr>
+<tr>
+<td>Intel(R) PRO/10GbE Network Driver</td>
+<td>ixgb</td>
+<td>1.0.135-k2-NAPI</td>
+</tr>
+<tr>
+<td>Driver for the Digi International Neo and Classic PCI based product line</td>
+<td>jsm</td>
+<td></td>
+</tr>
+<tr>
+<td>LCD Lowlevel Control Abstraction</td>
+<td>lcd</td>
+<td></td>
+</tr>
+<tr>
+<td>CRC32c (Castagnoli) calculations</td>
+<td>libcrc32c</td>
+<td></td>
+</tr>
+<tr>
+<td>SAS Transport Layer</td>
+<td>libsas</td>
+<td></td>
+</tr>
+<tr>
+<td>LLC IEEE 802.2 core support</td>
+<td>llc</td>
+<td></td>
+</tr>
+<tr>
+<td>Software async multibuffer crypto daemon</td>
+<td>mcryptd</td>
+<td></td>
+</tr>
+<tr>
+<td>Generic support for MDIO-compatible transceivers</td>
+<td>mdio</td>
+<td></td>
+</tr>
+<tr>
+<td>LSI Logic MegaRAID legacy driver</td>
+<td>megaraid</td>
+<td>2.00.4</td>
+</tr>
+<tr>
+<td>Avago MegaRAID SAS Driver</td>
+<td>megaraid_sas</td>
+<td>07.706.03.00-rc1</td>
+</tr>
+<tr>
+<td>LSI MPT Fusion SAS 3.0 Device Driver</td>
+<td>mpt3sas</td>
+<td>26.100.00.00</td>
+</tr>
+<tr>
+<td>Fusion MPT base driver</td>
+<td>mptbase</td>
+<td>3.04.20</td>
+</tr>
+<tr>
+<td>Fusion MPT SAS Host driver</td>
+<td>mptsas</td>
+<td>3.04.20</td>
+</tr>
+<tr>
+<td>Fusion MPT SCSI Host driver</td>
+<td>mptscsih</td>
+<td>3.04.20</td>
+</tr>
+<tr>
+<td>Failover driver for Paravirtual drivers</td>
+<td>net_failover</td>
+<td></td>
+</tr>
+<tr>
+<td>PMC-Sierra PM8001/8006/8081/8088/8089/8074/8076/8077/8070/8072 SAS/SATA controller driver</td>
+<td>pm80xx</td>
+<td>0.1.38</td>
+</tr>
+<tr>
+<td>Driver for AT42QT1070 QTouch sensor</td>
+<td>qt1070</td>
+<td></td>
+</tr>
+<tr>
+<td>RAID device class</td>
+<td>raid_class</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>rc-core</td>
+<td></td>
+</tr>
+<tr>
+<td>RMI bus RMI F03 module</td>
+<td>rmi_core</td>
+<td></td>
+</tr>
+<tr>
+<td>SAS Transport Attributes</td>
+<td>scsi_transport_sas</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>serial_cs</td>
+<td></td>
+</tr>
+<tr>
+<td>Raw serio driver</td>
+<td>serio_raw</td>
+<td></td>
+</tr>
+<tr>
+<td>SHA256 Secure Hash Algorithm, multi buffer accelerated</td>
+<td>sha256-mb</td>
+<td></td>
+</tr>
+<tr>
+<td>SHA256 Secure Hash Algorithm, Supplemental SSE3 accelerated</td>
+<td>sha256-ssse3</td>
+<td></td>
+</tr>
+<tr>
+<td>Advanced Linux Sound Architecture driver for soundcards.</td>
+<td>snd</td>
+<td></td>
+</tr>
+<tr>
+<td>Midlevel RawMidi code for ALSA.</td>
+<td>snd-rawmidi</td>
+<td></td>
+</tr>
+<tr>
+<td>ALSA sequencer device management</td>
+<td>snd-seq-device</td>
+<td></td>
+</tr>
+<tr>
+<td>Core sound module</td>
+<td>soundcore</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>stp</td>
+<td></td>
+</tr>
+<tr>
+<td>Broadcom Tigon3 ethernet driver</td>
+<td>tg3</td>
+<td>3.137</td>
+</tr>
+<tr>
+<td>Samsung touchkey driver</td>
+<td>tm2-touchkey</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>uas</td>
+<td></td>
+</tr>
+<tr>
+<td>User-space I/O driver support for HID subsystem</td>
+<td>uhid</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for Alauda-based card readers</td>
+<td>ums-alauda</td>
+<td></td>
+</tr>
+<tr>
+<td>SAT support for Cypress USB/ATA bridges with ATACB</td>
+<td>ums-cypress</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for Datafab USB Compact Flash reader</td>
+<td>ums-datafab</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for ENE UB6250 reader</td>
+<td>ums-eneub6250</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for Freecom USB/IDE adaptor</td>
+<td>ums-freecom</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for In-System Design, Inc. ISD200 ASIC</td>
+<td>ums-isd200</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for Lexar Jumpshot Compact Flash reader</td>
+<td>ums-jumpshot</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for Rio Karma</td>
+<td>ums-karma</td>
+<td></td>
+</tr>
+<tr>
+<td>Maxtor USB OneTouch hard drive button driver</td>
+<td>ums-onetouch</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for Realtek USB Card Reader</td>
+<td>ums-realtek</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for SanDisk SDDR-09 SmartMedia reader</td>
+<td>ums-sddr09</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for SanDisk SDDR-55 SmartMedia reader</td>
+<td>ums-sddr55</td>
+<td></td>
+</tr>
+<tr>
+<td>Driver for SCM Microsystems (a.k.a. Shuttle) USB-ATAPI cable</td>
+<td>ums-usbat</td>
+<td></td>
+</tr>
+<tr>
+<td>USB Mass Storage driver for Linux</td>
+<td>usb-storage</td>
+<td></td>
+</tr>
+<tr>
+<td>Virtio block driver</td>
+<td>virtio_blk</td>
+<td></td>
+</tr>
+<tr>
+<td>Virtio network driver</td>
+<td>virtio_net</td>
+<td></td>
+</tr>
+<tr>
+<td>VMware vmxnet3 virtual NIC driver</td>
+<td>vmxnet3</td>
+<td>1.4.16.0-k</td>
+</tr>
+<tr>
+<td>USB Wacom tablet driver</td>
+<td>wacom</td>
+<td>v2.00</td>
+</tr>
+<tr>
+<td>SGI XFS with ACLs, security attributes, scrub, no debug enabled</td>
+<td>xfs</td>
+<td></td>
+</tr>
+<tr>
+<td>xHCI Platform Host Controller Driver</td>
+<td>xhci-plat-hcd</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x65B0;&#x786C;&#x4EF6;&#x9002;&#x914D;">&#x65B0;&#x786C;&#x4EF6;&#x9002;&#x914D;</h2>
+<p>&#x5982;&#x679C;&#x9047;&#x5230;&#x4E0D;&#x80FD;&#x652F;&#x6301;&#x7684;&#x786C;&#x4EF6;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x4EEC;&#xFF0C;&#x5728; GitHub &#x4E0A;&#x9762;&#x63D0;&#x4EA4; issue&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x4F18;&#x5148;&#x5904;&#x7406; GitHub &#x4E0A;&#x9762;&#x7684;&#x786C;&#x4EF6;&#x9002;&#x914D;&#x9700;&#x6C42;&#x3002;&#x53CD;&#x9988;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/idcos/osinstall-server/issues" target="_blank">https://github.com/idcos/osinstall-server/issues</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="BootOS使用.html" class="navigation navigation-prev " aria-label="Previous page: BootOS使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../hardware/" class="navigation navigation-next " aria-label="Next page: 硬件配置开发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"BootOS适配","level":"1.5.3","depth":2,"next":{"title":"硬件配置开发","level":"1.6","depth":1,"path":"hardware/README.md","ref":"hardware/README.md","articles":[{"title":"硬件配置基础","level":"1.6.1","depth":2,"path":"hardware/硬件配置基础.md","ref":"hardware/硬件配置基础.md","articles":[]},{"title":"硬件工具包使用","level":"1.6.2","depth":2,"path":"hardware/硬件工具包使用.md","ref":"hardware/硬件工具包使用.md","articles":[]},{"title":"硬件工具包开发","level":"1.6.3","depth":2,"path":"hardware/硬件工具包开发.md","ref":"hardware/硬件工具包开发.md","articles":[]},{"title":"硬件工具打包规范","level":"1.6.4","depth":2,"path":"hardware/硬件工具打包规范.md","ref":"hardware/硬件工具打包规范.md","articles":[]}]},"previous":{"title":"BootOS使用","level":"1.5.2","depth":2,"path":"bootos/BootOS使用.md","ref":"bootos/BootOS使用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":null,"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"osinstall-doc","links":{"sidebar":{},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":null,"extension":null},"file":{"path":"bootos/BootOS适配.md","mtime":"2019-03-05T07:05:35.045Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T07:05:39.039Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
