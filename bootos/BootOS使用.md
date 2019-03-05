@@ -3,8 +3,7 @@
 搭建BootOS启动环境，需要配置tftp启动文件，内容如下：
 
 ```bash
-# cat /opt/cloudboot/var/lib/tftpboot/pxelinux.cfg/default
-DEFAULT menu.c32
+# cat /var/lib/tftpboot/pxelinux.cfg/default
 PROMPT 0
 TIMEOUT 30
 
@@ -38,8 +37,7 @@ BootOS提供一个配置参数，可以打开开发者模式。那么开发者�
 如何打开开发者模式？修改PXE default配置如下，增加```DEVELOPER=1```参数即可。
 
 ```bash
-# cat /opt/cloudboot/var/lib/tftpboot/pxelinux.cfg/default
-DEFAULT menu.c32
+# cat /var/lib/tftpboot/pxelinux.cfg/default
 PROMPT 0
 TIMEOUT 30
 
@@ -56,8 +54,7 @@ LABEL bootos
 BootOS内置agent，并自动启动，负责硬件信息的采集和硬件初始化配置。这里提供了两个接口，可以方便调用用户自己的脚本，做一些更复杂的操作。
 
 ```bash
-# cat /opt/cloudboot/var/lib/tftpboot/pxelinux.cfg/default
-DEFAULT menu.c32
+# cat /var/lib/tftpboot/pxelinux.cfg/default
 PROMPT 0
 TIMEOUT 30
 

@@ -6,7 +6,7 @@
 
 ```bash
 # mount -o loop XenServer-6.5.0-xenserver.org-install-cd.iso /media/
-# rsync -az /media/ /opt/cloudboot/home/www/xenserver/6.5/
+# rsync -az /media/ /home/www/xenserver/6.5/
 ```
 
 最后，在安装设备的时候，PXE模板选择`xenserver6.5-x86_64`，系统模板选择`xenserver6.5`即可。
