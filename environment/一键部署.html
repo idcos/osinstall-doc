@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>一键部署 · osinstall-doc</title>
+        <title>一键部署 · cloudboot</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -686,11 +686,11 @@
 <span class="token function">cd</span> osinstall-deploy
 </code></pre>
 <ul>
-<li>&#x542F;&#x52A8; mysql &#x5BB9;&#x5668;<strong>&#xFF08;&#x9ED8;&#x8BA4; root &#x5BC6;&#x7801;&#x662F; 0okm#IJN&#xFF09;</strong></li>
+<li>&#x542F;&#x52A8; mysql &#x5BB9;&#x5668;<strong>&#xFF08;&#x9ED8;&#x8BA4; root &#x5BC6;&#x7801;&#x662F; 0okm#IJN&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x542F;&#x52A8;&#x6570;&#x636E;&#x5E93;&#x8BF7;&#x7B49;&#x5F85; 1 &#x5206;&#x949F;&#xFF09;</strong></li>
 </ul>
 <pre class="language-"><code class="lang-bash">docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD<span class="token operator">=</span><span class="token string">&apos;0okm#IJN&apos;</span> \
     -v /data/mysql:/var/lib/mysql \
-    -v <span class="token variable">$PWD</span>/sql:/docker-entrypoint-initdb.d \
+    -v <span class="token variable">$PWD</span>/mysql:/docker-entrypoint-initdb.d \
     mysql:5.7
 </code></pre>
 <ul>
@@ -704,7 +704,7 @@
 <ul>
 <li>&#x542F;&#x52A8; cloudact2 &#x5BB9;&#x5668;</li>
 </ul>
-<pre class="language-"><code class="lang-bash">docker run --privileged -d --name<span class="token operator">=</span>cloudact2 --net<span class="token operator">=</span>host -e IP<span class="token operator">=</span>192.168.2.1 \
+<pre class="language-"><code class="lang-bash">docker run --privileged -d --name<span class="token operator">=</span>cloudact2 --net<span class="token operator">=</span>host \
     -v <span class="token variable">$PWD</span>/cloudact2/deploy/conf/cloud-act2.yaml:/usr/yunji/cloud-act2/etc/cloud-act2.yaml \
     -v <span class="token variable">$PWD</span>/cloudact2/deploy/conf/cloud-act2-proxy.yaml:/usr/yunji/cloud-act2/etc/cloud-act2-proxy.yaml \
     -v <span class="token variable">$PWD</span>/cloudact2/deploy/conf/salt-api.conf:/etc/salt/master.d/salt-api.conf \
@@ -713,9 +713,9 @@
 <ul>
 <li>&#x5BFC;&#x5165; ISO &#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x4ECB;&#x8D28;&#x5230;&#x5BF9;&#x5E94;&#x76EE;&#x5F55;&#xFF08;&#x4EE5; centos 7.6 &#x4E3A;&#x4F8B;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528; DVD &#x5168;&#x91CF;&#x955C;&#x50CF;&#xFF09;</li>
 </ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">mkdir</span> -p <span class="token variable">$PWD</span>/cloudboot/deploy/iso/7.6/os/x86_64/
-<span class="token function">mount</span> -o loop CentOS-7-x86_64-DVD-1810.iso /media
-<span class="token function">rsync</span> -a /media <span class="token variable">$PWD</span>/cloudboot/deploy/iso/centos/7.6/os/x86_64/
+<pre class="language-"><code class="lang-bash"><span class="token function">mkdir</span> -p <span class="token variable">$PWD</span>/cloudboot/deploy/iso/centos/7.6/os/x86_64/
+<span class="token function">mount</span> -o loop /path/of/CentOS-7-x86_64-DVD-1810.iso /media
+<span class="token function">rsync</span> -a /media/ <span class="token variable">$PWD</span>/cloudboot/deploy/iso/centos/7.6/os/x86_64/
 <span class="token function">umount</span> /media
 </code></pre>
 <ul>
@@ -764,7 +764,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"一键部署","level":"1.4.1","depth":2,"next":{"title":"BootOS介绍","level":"1.5","depth":1,"path":"bootos/README.md","ref":"bootos/README.md","articles":[{"title":"BootOS概述","level":"1.5.1","depth":2,"path":"bootos/BootOS概述.md","ref":"bootos/BootOS概述.md","articles":[]},{"title":"BootOS使用","level":"1.5.2","depth":2,"path":"bootos/BootOS使用.md","ref":"bootos/BootOS使用.md","articles":[]},{"title":"BootOS适配","level":"1.5.3","depth":2,"path":"bootos/BootOS适配.md","ref":"bootos/BootOS适配.md","articles":[]}]},"previous":{"title":"环境搭建","level":"1.4","depth":1,"path":"environment/README.md","ref":"environment/README.md","articles":[{"title":"一键部署","level":"1.4.1","depth":2,"path":"environment/一键部署.md","ref":"environment/一键部署.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":null,"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"osinstall-doc","links":{"sidebar":{},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":null,"extension":null},"file":{"path":"environment/一键部署.md","mtime":"2019-03-05T07:05:35.047Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T07:05:39.039Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"一键部署","level":"1.4.1","depth":2,"next":{"title":"BootOS介绍","level":"1.5","depth":1,"path":"bootos/README.md","ref":"bootos/README.md","articles":[{"title":"BootOS概述","level":"1.5.1","depth":2,"path":"bootos/BootOS概述.md","ref":"bootos/BootOS概述.md","articles":[]},{"title":"BootOS使用","level":"1.5.2","depth":2,"path":"bootos/BootOS使用.md","ref":"bootos/BootOS使用.md","articles":[]},{"title":"BootOS适配","level":"1.5.3","depth":2,"path":"bootos/BootOS适配.md","ref":"bootos/BootOS适配.md","articles":[]}]},"previous":{"title":"环境搭建","level":"1.4","depth":1,"path":"environment/README.md","ref":"environment/README.md","articles":[{"title":"一键部署","level":"1.4.1","depth":2,"path":"environment/一键部署.md","ref":"environment/一键部署.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":null,"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"cloudboot","links":{"sidebar":{},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":null,"extension":null},"file":{"path":"environment/一键部署.md","mtime":"2019-03-05T09:48:45.875Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T09:51:06.197Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
