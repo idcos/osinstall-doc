@@ -13,15 +13,22 @@ BootOS精简了大部分驱动程序，只保留系统核心和硬件支持必�
 | Altera University Program PS2 controller driver | altera_ps2 |  |
 | ARC PS/2 Driver | arc_ps2 |  |
 | ARC(Synopsys) On-Chip(fpga) serial driver | arc_uart |  |
+| Broadcom 44xx/47xx 10/100 PCI ethernet driver | b44 | 2.0 |
 | QLogic BCM5706/5708/5709/5716 Driver | bnx2 | 2.2.6 |
 | QLogic BCM57710/57711/57711E/57712/57712_MF/57800/57800_MF/57810/57810_MF/57840/57840_MF Driver | bnx2x | 1.712.30-0 |
+| Broadcom BCM573xx network driver | bnxt_en | 1.9.2 |
 |  | bridge | 2.3 |
+| QLogic cnic Driver | cnic | 2.5.22 |
 | CRC32c (Castagnoli) optimization using Intel Hardware. | crc32c-intel |  |
 |  | dca | 1.12.1 |
+| Network physical device Netlink interface | devlink |  |
 | Intel(R) PRO/1000 Network Driver | e1000e | 3.2.6-k |
 | Intel(R) PRO/1000 Network Driver | e1000 | 7.3.21-k8-NAPI |
+| Intel(R) PRO/100 Network Driver | e100 | 3.5.24-k2-NAPI |
 | Generic failover infrastructure/interface | failover |  |
 | Force feedback support for memoryless devices | ff-memless |  |
+| Intel(R) Ethernet Switch Host Interface Driver | fm10k | 0.23.4-k |
+| Broadcom GENET Ethernet controller driver | genet |  |
 | Keyboard driver for GPIOs | gpio_keys |  |
 |  | hid-a4tech |  |
 | Elo Accutouch HID TouchScreen driver | hid-accutouch |  |
@@ -119,6 +126,9 @@ BootOS精简了大部分驱动程序，只保留系统核心和硬件支持必�
 |  | hyperv-keyboard |  |
 | I2C-Bus bit-banging algorithm | i2c-algo-bit |  |
 | HID over I2C core driver | i2c-hid |  |
+| Intel(R) Ethernet Connection XL710 Network Driver | i40e | 2.3.2-k |
+| Intel(R) XL710 X710 Virtual Function Network Driver | i40evf | 3.2.2-k |
+| Intel(R) Ethernet Connection E800 Series Linux Driver | ice | ice-0.7.0-k |
 | Intel(R) Gigabit Ethernet Network Driver | igb | 5.4.0-k |
 | Intel(R) Gigabit Virtual Function Network Driver | igbvf | 2.4.0-k |
 | Intel(R) Integrated Sensor Hub PCI Device Driver | intel-ish-ipc |  |
@@ -141,6 +151,8 @@ BootOS精简了大部分驱动程序，只保留系统核心和硬件支持必�
 | Generic support for MDIO-compatible transceivers | mdio |  |
 | LSI Logic MegaRAID legacy driver | megaraid | 2.00.4 |
 | Avago MegaRAID SAS Driver | megaraid_sas | 07.706.03.00-rc1 |
+| MII hardware support library | mii |  |
+|  | mmc_core |  |
 | LSI MPT Fusion SAS 3.0 Device Driver | mpt3sas | 26.100.00.00 |
 | Fusion MPT base driver | mptbase | 3.04.20 |
 | Fusion MPT SAS Host driver | mptsas | 3.04.20 |
@@ -160,11 +172,13 @@ BootOS精简了大部分驱动程序，只保留系统核心和硬件支持必�
 | Midlevel RawMidi code for ALSA. | snd-rawmidi |  |
 | ALSA sequencer device management | snd-seq-device |  |
 | Core sound module | soundcore |  |
+| Sonics Silicon Backplane driver | ssb |  |
 |  | stp |  |
 | Broadcom Tigon3 ethernet driver | tg3 | 3.137 |
 | Samsung touchkey driver | tm2-touchkey |  |
 |  | uas |  |
 | User-space I/O driver support for HID subsystem | uhid |  |
+|  | uio |  |
 | Driver for Alauda-based card readers | ums-alauda |  |
 | SAT support for Cypress USB/ATA bridges with ATACB | ums-cypress |  |
 | Driver for Datafab USB Compact Flash reader | ums-datafab |  |
