@@ -1,32 +1,39 @@
 {
-    "output": null,
-    "generator": "site",
-    "title": null,
-    "description": null,
-    "extension": null,
-    "github": null,
-    "plugins": ["prism", "-highlight"],
-    "links": {
-    	"sidebar": {
-    	},
-        "sharing": {
-            "google": null,
-            "facebook": null,
-            "twitter": null,
-            "weibo": null,
-            "all": null
-        }
-    },
-    "pdf": {
-        "toc": true,
-        "pageNumbers": false,
-        "fontSize": 12,
-        "paperSize": "a4",
-        "margin": {
-            "right": 62,
-            "left": 62,
-            "top": 36,
-            "bottom": 36
-        }
+  "output": null,
+  "generator": "site",
+  "title": "",
+  "description": null,
+  "extension": null,
+  "github": null,
+  "plugins": [
+    "prism",
+    "-highlight"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
     }
+  },
+  "links": {
+    "sidebar": {},
+    "sharing": {
+      "google": null,
+      "facebook": null,
+      "twitter": null,
+      "weibo": null,
+      "all": null
+    }
+  },
+  "pdf": {
+    "toc": true,
+    "pageNumbers": false,
+    "fontSize": 12,
+    "paperSize": "a4",
+    "margin": {
+      "right": 62,
+      "left": 62,
+      "top": 36,
+      "bottom": 36
+    }
+  }
 }
